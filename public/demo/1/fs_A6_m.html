@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>超级经典一套鼠标控制左右滚动图片带自动翻滚</title>
+    
+    <link type="text/css" rel="stylesheet" href="http://mat1.gtimg.com/www/base/base.css">
+</head>
+<body>
+    <style type="text/css">
+.fs_A6{ height:200px; position:relative; background:transparent; width:310px; position:relative; margin-left:200px; }
+.fs_A6 .fBt{ position:absolute; top:175px; left:227px; overflow:hidden; zoom:1;  height:16px; z-index:10; }
+.fs_A6 .shadow{ width:310px; position:absolute; top:165px; left:0px; z-index:10; height:34px; background:rgba(0,0,0,0.6);  
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:left; }
+.fs_A6 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; margin-left:10px; }
+.fcon{ position:relative; width:310px; float:left;   }
+.fs_A6 .fBt i{font-style:normal }  
+.fs_A6 .fBt a{display:inline;float:left;background:#000;width:18px;height:15px;position:relative;  
+margin:0 1px 0 0;color:#B0B0B0;font:12px/15px "宋体";text-decoration:none; text-align:center; outline:0 }
+.fs_A6 .fBt a:hover,.fs_A6 .fBt a.current{ background:#CB0E02;color:#fff}
+.fs_A6 .fcon img{ display:block; }
+.fs_A6 .fix{ position:relative; height:9999px; height:200px;  }
+.fs_A6 .fPs{height:100%; overflow:hidden; position:relative;  }
+    </style>
+    <!--HTML结构开始-->
+    <div id="focus1" class="fs_A6">
+		<div class="fPs">
+			<div class="fix">
+				<div id="fPic1" class="fPic">
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_1.jpg"></a> <span class="shadow">
+								<a target="_blank" href="#">text1text1text1text1text1</a> </span>
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_2.jpg"></a> <span class="shadow">
+								<a target="_blank" href="#">text2text2text2text2text2</a> </span>
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_3.jpg"></a> <span class="shadow">
+								<a target="_blank" href="#">text3text3text3text3text3</a> </span>
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_4.jpg"></a> <span class="shadow">
+								<a target="_blank" href="#">text4text4text4text4text4</a> </span>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="fBt" id="fBt">
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>1</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>2</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>3</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>4</i></a>
+		</div>
+</div>
+    <!--HTML结构开始-->
+    <!--JS调取参数配置开始 -->
+    <script type="text/javascript">
+        Qfast.add('fx', { path: "http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js", type: "js" });
+        Qfast.add('widgets', { path: "http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js", type: "js", requires: ['fx'] });
+        Qfast(true, 'widgets', function () {
+            K.tabs({
+                id: 'focus1',   //焦点图包裹id
+                conId: "fPic1",  //** 大图域包裹id
+				tabId:"fBt", //** 按钮域包裹id
+				tabTn:"a", // ** 按钮配置元素
+	            conCn: '.fcon', //** 大图域配置class			
+                auto: 1,   //自动播放
+                effect: 'slide',   //效果配置	
+				vertical:'top', //焦点图滚动方向				
+                eType: 'mouseover', //** 鼠标事件
+				pageBt:true,//是否有按钮切换页码
+                interval: 2000  //** 停顿时间
+            })
+
+        })
+
+    </script>
+    <!--JS调取参数配置结束 -->
+</body>
+</html>

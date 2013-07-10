@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>无按钮水平滚动</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+
+<script type="text/javascript" src="http://mat1.gtimg.com/www/js/Koala/Koala.min.1.5.js"></script>  
+    <script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"}); 
+Qfast.add('widgets1',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+Qfast(true,'widgets1',function(){
+		K.scroll({ 
+			id:"ScA1",  		        		//滚动区域包裹id
+			effect:"scroll",       		//效果配置
+			conID:"ISL_Cont1",  	//实际滚动区域包裹id
+			scrWrap:".count",    	//实际滚动区域配置class
+			scrElem:"li",  				//滚动单元元素配置	
+			scrNum:1, 						//触发一次滚动事件走过的滚动元素个数 
+			auto:1, 							//自动滚动是否开启
+			vertical:"left",				//滚动方向
+			loop:true,						//是否循环滚动
+			interval:1000 //自动滚动时间间隔
+		})
+})
+
+    </script>
+    <style type="text/css">
+	#ScA1{ border:1px solid #797979; overflow:hidden; zoom:1; height:189px; position:relative; width:830px; margin:20px auto; }
+	#ScA1 li{ float:left; width:156px; height:156px;  padding:0 5px;  }
+	#ScA1 .count{ overflow:hidden; float:left; }
+	#ScA1 li img{ width:150px; height:150px; display:block; padding:3px; overflow:hidden;  }
+	#ScA1 li a:hover{ background:red; }  /*ie6,7*/
+	#ScA1 li a:hover img{ background:red;}
+	#ScA1 .cols2{ position:absolute; top:20px; left:68px; overflow:hidden; zoom:1; width:666px;  }
+	#ScA1 .cols{ position:absolute;  width:9999px; }	
+	#ScA1 a.prev:hover{ display:block;}	
+	#ScA1 .wr{ height:283px; position:relative; overflow:hidden; }
+	#ScA1 a.next:hover{ display:block;}		
+	#ScA1 .wr{ height:283px; position:relative; overflow:hidden; }	
+	#ScA1 .count{ float:left; }
+    </style>
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>焦点图</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><a href="javascript:void(0)">焦点图</a><i>&gt;</i><span>效果A</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+			<div class="cMode">
+            <!--HTML结构开始，请勿修改-->  
+			<div id="wrap">
+				<div id="ScA1">
+					<div style="overflow: hidden; zoom: 1; width: 826px; position: relative;
+						height: 180px;">
+						<div class="cols" id="ISL_Cont1">
+							<ul class="count">
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic3.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic4.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic3.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+								<li class=""><a href="#">
+									<img src="http://mat1.gtimg.com/joke/Koala/pic/none.png"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				K(function(){ 			
+					   var globalVar,html;			
+					   html=K("wrap").html();
+					   K("clicks").click(function(){ 
+						K("ScA1").remove();
+						K("wrap").html(html);				
+						   var option={
+								scrNum:K('sel').node.value,
+								interval:K('sel3').node.value
+							 };  
+							setTimeout(function(){
+								K.scroll({ 
+									id:'ScA1',  		        		//滚动区域包裹id
+									effect:'scroll',       		//效果配置
+									conID:'ISL_Cont1',  	//实际滚动区域包裹id
+									scrWrap:'.count',    	//实际滚动区域配置class
+									scrElem:'li',  				//滚动单元元素配置	
+									scrNum:option.scrNum, 						//触发一次滚动事件走过的滚动元素个数 
+									auto:1, 							//自动滚动是否开启
+									vertical:'left',				//滚动方向
+									loop:true,						//是否循环滚动
+									interval:option.interval //自动滚动时间间隔
+								});
+							},100);	   
+				var code=	"K.scroll({ id: 'ScA1',  effect:'scroll' , conID:'ISL_Cont1' ,scrWrap:'.count', scrElem:'li', scrNum:"+option.scrNum+", auto: "+option.auto+", vertical:'left' , loop:true,	interval: "+option.interval+"})";  	
+			K("int").html(code).css({ width:parseInt(KK(".cMode").item(0).css("min-width"))-10+"px"});	
+					 });			
+					   
+				});
+			</script>		
+<div class="add">
+<div style="height:40px; line-height:40px; ">
+<select name="fid"  id="sel" style="font-size:12px;width:115x;" >
+	<option  value="1">滚动元素个数</option>
+	<option value="1" style="background-color: #F2FFD3;">1</option>
+	<option value="2" style="background-color: #F2FFD3;">2</option>
+	<option value="3" style="background-color: #F2FFD3;">3</option>
+	<option value="4" style="background-color: #F2FFD3;">4</option>
+	<option value="5" style="background-color: #F2FFD3;">5</option>
+</select>
+<select id="sel3">
+	<option  value="2000">选择切换时间</option>
+	<option value="1000" style="background-color: #F2FFD3;">1000</option>	
+	<option value="2000" style="background-color: #F2FFD3;">2000</option>	
+	<option value="3000" style="background-color: #F2FFD3;">3000</option>	
+	<option value="4000" style="background-color: #F2FFD3;">4000</option>	
+</select>
+<input type="button"  value="生成" id="clicks" />
+</div>
+<div style=" font:14px/20px '微软雅黑'">
+配置后可更换参数，<span>注：替换Qfast(false,'widgets',function(){ <span style="color:red">K.tabs({ })</span> } ) 即可</span>
+</div>
+<br />
+<div id="int" style="color:#666; font:14px/20px '微软雅黑'; ">
+
+</div>				
+</div>				
+			</div>
+          </div>
+		</td>
+	</tr>
+	<tr>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+	</tr>
+	<tr>
+	 <td valign="top">
+		<textarea name="code" class="html" id="code">
+    <style type="text/css">
+	#ScA1{ border:1px solid #797979; overflow:hidden; zoom:1; height:189px; position:relative; width:830px; margin:20px auto; }
+	#ScA1 li{ float:left; width:156px; height:156px;  padding:0 5px;  }
+	#ScA1 .count{ overflow:hidden; float:left; }
+	#ScA1 li img{ width:150px; height:150px; display:block; padding:3px; overflow:hidden;  }
+	#ScA1 li a:hover{ background:red; }  /*ie6,7*/
+	#ScA1 li a:hover img{ background:red;}
+	#ScA1 .cols2{ position:absolute; top:20px; left:68px; overflow:hidden; zoom:1; width:666px;  }
+	#ScA1 .cols{ position:absolute;  width:9999px; }	
+	#ScA1 a.prev:hover{ display:block;}	
+	#ScA1 .wr{ height:283px; position:relative; overflow:hidden; }
+	#ScA1 a.next:hover{ display:block;}		
+	#ScA1 .wr{ height:283px; position:relative; overflow:hidden; }	
+	#ScA1 .count{ float:left; }
+    </style>
+    <!--HTML结构开始-->
+	<div id="ScA1">
+		<div style="overflow: hidden; zoom: 1; width: 826px; position: relative;
+			height: 180px;">
+			<div class="cols" id="ISL_Cont1">
+				<ul class="count">
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic3.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic4.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic3.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/pic2.png"></a></li>
+					<li class=""><a href="#">
+						<img src="http://mat1.gtimg.com/joke/Koala/pic/none.png"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <!--HTML结构开始-->
+    <!--JS调取参数配置开始 -->
+
+<script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"}); 
+Qfast.add('widgets',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+Qfast(false,'widgets',function(){
+		K.scroll({ 
+			id:"ScA1",  		        		//滚动区域包裹id
+			effect:"scroll",       		//效果配置
+			conID:"ISL_Cont1",  	//实际滚动区域包裹id
+			scrWrap:".count",    	//实际滚动区域配置class
+			scrElem:"li",  				//滚动单元元素配置	
+			scrNum:1, 						//触发一次滚动事件走过的滚动元素个数 
+			auto:1, 							//自动滚动是否开启
+			vertical:"left",				//滚动方向
+			loop:true,						//是否循环滚动
+			interval:1000 //自动滚动时间间隔
+		})
+})
+
+</script>
+    <!--JS调取参数配置结束 -->
+		
+		</textarea>
+</td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<style>
+			.dp-highlighter .bar{ display:block; padding-left:15px;  }
+</style>
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

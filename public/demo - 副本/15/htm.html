@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>ajax ip Tab</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>ajax ip Tab</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><span>ajax ip Tab</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+<p>制作者：boqiu</p>
+<p>AJAXip定向功能页卡，demo地址：<a href="http://mat1.gtimg.com/news/c9/ajaxdemo.html" target="_blank">http://mat1.gtimg.com/news/c9/ajaxdemo.html</a></p>
+<p>功能说明:判断客户端发送请求的ip地址，若服务器端同源下ip地址对应城市名称有指定的html文件，则自动创建第三个页卡并异步载入指定的html文件。</p>
+<p>若客户端请求的ip地址对应的城市名称不存在，则不创建新页卡，创建一个可以配置的链接</p>
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<script type="text/javascript" src="http://mat1.gtimg.com/news/js/Qfast.js"></script>
+    <!--以下样式为配置页卡的css-->  
+    <style type="text/css">
+        .focus{width: 400px;position: relative;}
+        .focus .tab{overflow: hidden;zoom: 1;height: 27px;}
+        .focus .tab li{float: left;width: 110px;height: 27px;line-height: 27px;font-size: 14px;text-align: center;margin-right: 5px;cursor: pointer;border: 1px solid #000;}
+        .focus .tab li.current{font-weight: bolder; }
+        .focus .con{border: 1px solid #000;height:300px;}
+        #Dynlink{position: absolute;top: 5px;right:60px;}
+    </style>
+    <!--以上样式为配置页卡的css-->  
+    <!--HTML结构开始，请勿修改-->  
+    <div class="focus" id="focus">
+        <ul class="tab" id="tab">
+            <li><a href="#" target="_blank">页卡1</a></li>
+            <li><a href="#" target="_blank">页卡2</a></li>
+        </ul>
+        <div id="con">
+            <div class="con">
+                内容1
+            </div>
+            <div class="con" style="display: none">
+                内容2
+            </div>
+        </div>
+    </div>
+    <!--HTML结构结束，请勿修改-->  
+    <!--js行为控制开始，请勿修改-->  
+    <script type="text/javascript">
+        Qfast.add('tabs', { path: 'http://mat1.gtimg.com/news/js/tabs.js', type: 'js' });  
+        Qfast(true, 'lib2');
+    </script>
+   <!--js行为控制结束，请勿修改-->  
+    <script type="text/javascript">
+        (function () {
+            /*配置ip地址异步载入的页卡内容html,注意：以下html文件必须与demo文件同源，否则会出现ajax跨域问题*/
+            var ipplace = {
+                '泸州市': 'luzhou.html',
+                '绵阳市': 'mianyang.html',
+                '南充市': 'nanchong.html',
+                '北京市': 'beijing.html'
+            };
+            simplexhr = {
+                doxhr: function (container, url) {
+                    if (!document.getElementById || !document.createTextNode) { return; }
+                    simplexhr.outputContainer = document.getElementById(container);
+                    if (!simplexhr.outputContainer) { return; }
+                    var request;
+                    try {
+                        request = new XMLHttpRequest();
+                    } catch (error) {
+                        try {
+                            request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (error) {
+                            return true;
+                        }
+                    }
+                    request.open('get', url, true);
+                    request.onreadystatechange = function () {
+                        if (request.readyState == 1) {
+                            simplexhr.outputContainer.innerHTML = 'loading...';
+                        }
+                        if (request.readyState == 4) {
+                            if (request.status && /200|304/.test(request.status)) {
+                                simplexhr.retrieved(request);
+                            } else {
+                                simplexhr.failed(request);
+                            }
+                        }
+                    }
+                    request.setRequestHeader('If-Modified-Since', 'Wed, 05 Apr 2006 00:00:00 GMT');
+                    request.send(null);
+                    return false;
+                },
+                retrieved: function (requester) {
+                    var data = requester.responseText;
+                    simplexhr.outputContainer.innerHTML = data;
+                    return false;
+                },
+                failed: function (requester) {
+                    alert('The XMLHttpRequest failed. Status: ' + requester.status);
+                    return true;
+                }
+            };
+            var tool = function (p) {
+                var _self = this;
+                this.load(this.ip, function () {
+                    var cityName = IPData[2].replace("市", "");
+                    if (!ipplace[IPData[2]]) {
+                        $('focus').insert({
+                            //ip地址匹配不到城市时，请配置链接地址链接，名称
+                            top: '<a href="#" id="Dynlink">无IP数据显示</a>'
+                        })
+                        Qfast(false, 'tabs', function () { tabs({ tabId: 'tab', conId: 'con', conCn: 'con', current: 0, eType: 'mouseover' }) });
+                    }
+                    else {
+                        $("tab").insert({
+                            bottom: '<li id="iptest"><a href="#" target="_blank"></a></li>'
+                        });
+                        $('con').insert({
+                            bottom: '<div class="con" id="ipredirect" style="display:none" ></div>'
+                        })
+                        Qfast(false, 'tabs', function () { tabs({ tabId: 'tab', conId: 'con', conCn: 'con', current: 0, eType: 'mouseover' }) });
+                        var redirect = QCOM.getEbyId(p.cit).getElementsByTagName("a")[0];
+                        redirect.setAttribute("href", ipplace[IPData[2]])
+                        redirect.innerHTML = cityName;
+                        simplexhr.doxhr('ipredirect', ipplace[IPData[2]]);
+                    }
+                }
+            )
+            }
+            tool.prototype = {
+                ip: 'http://fw.qq.com:80/ipaddress',
+                load: function (file, callback) {
+                    try {
+                        var script = document.createElement('script');
+                        script.src = file + "?" + Math.random();
+                        script.type = "text/javascript";
+                        document.getElementsByTagName("head")[0].appendChild(script);
+                        if (script.addEventListener) {
+                            script.addEventListener("load", callback, false);
+                        } else if (script.attachEvent) {
+                            script.attachEvent("onreadystatechange", function () {
+                                if (script.readyState == 4
+								|| script.readyState == 'complete' || script.readyState == 'loaded') {
+                                    callback();
+                                }
+                            });
+                        }
+                    } catch (e) {
+                        callback();
+                    }
+                },
+                check: function (item, arr) {
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i] == item) {
+                            return arr[i];
+                        }
+                        return item;
+                    }
+                },
+                checkIndex: function (i, a) {
+                    if (a[i]) {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            new tool({ cit: 'iptest' })
+        })();
+
+    </script>
+
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>视频切换</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>多功能new</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><span>多功能new</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+<style type="text/css">
+*{margin:0px;padding:0px;}
+li{list-style-type:none}
+img{border:none}    /*本行及本行以上可删*/
+
+#focus{width:625px; height:419px;overflow:hidden;position:relative; margin:10px}
+#focus .focus_view{width:625px;height:349px;overflow: hidden;}
+#focus .focus_view ul{position:relative;width:625px;height:349px;}
+#focus .focus_view li{position:absolute;width:625px;height:349px;top:0px;left:0px;filter:alpha(opacity:0);opacity:0}
+#focus .focus_view img{float:left;width:625px; height:350px;}
+#focus .focus_text{position:absolute;left:0;top:310px;padding: 0 15px;background:rgba(0,0,0,0.5);filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#50000000',endColorstr = '#50000000')\9;width:595px;}
+#focus .focus_text h3{line-height:40px;height:40px;overflow:hidden;padding-right:40px;}
+#focus .focus_text h3 a{font-size:18px;color:#fff;font-family:"微软雅黑", "黑体", Arial, sans-serif;font-weight:normal;text-decoration:none}
+#focus .focus_text li{display:none;}
+#focus .focus_text li.show{display:block;}
+#focus .focus_slider{width:625px;height:64px; padding-top:6px; margin: 0 auto;}
+#focus .focus_slider .mask{width:590px;height:64px;overflow:hidden;float:left;margin-left:6px;display:inline;}
+#focus .focus_slider ul{width:1180px;margin-left:0px;}
+#focus .focus_slider li{float:left;width:118px;height:64px;display:inline;overflow: hidden;}
+#focus .focus_slider li img{filter:alpha(opacity:60);opacity:0.6;width:115px;height:64px;}
+#focus .focus_slider li a{display:block;width:115px;height:64px;overflow:hidden;background:#000;}
+#focus span.prev,#focus span.next{ float: left; width:13px; height:64px; cursor:pointer; margin:0;background-image:url(http://mat1.gtimg.com/news/wangchuang/theme_ui.png); background-repeat: no-repeat;}
+#focus span.prev{background-position: -710px -124px;}
+#focus span.next{background-position: -736px -124px;float:right;}
+#focus li.current img{filter:alpha(opacity:100);opacity:1}
+#focus #num{position:absolute;right:10px;top:10px;color:#fff;font-size:14px;}
+</style>
+<div id="focus">
+	<div id="focus_view" class="focus_view"> <!--大图-->
+		<ul>
+			<li style="filter:alpha(opacity:100);opacity:1"><a href="#1"><img id="bigimg_1" src="http://mat1.gtimg.com/news/wangchuang/1.jpg" /></a></li>
+			<li><a href="#2"><img src="http://mat1.gtimg.com/news/wangchuang/2.jpg" /></a></li>
+			<li><a href="#3"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /></a></li>
+			<li><a href="#4"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /></a></li>	
+			<li><a href="#3"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /></a></li>
+			<li><a href="#4"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /></a></li>								
+		</ul>
+	</div>
+	<div id="focus_text" class="focus_text" >  <!--标题-->
+		<ul>
+			<li class="show"><h3><a href="http://www.qq.com">标题1标题1标题1标题1标题1标题1题1标题标题1标题1标题1标题1标题1标题1</a></h3></li>
+			<li><h3><a href="http://www.qq.com">文字2文字2文字2文字2文字2文字2</a></h3></li>
+			<li><h3><a href="http://www.qq.com">文字3文字3文字3文字3文字3文字3</a></h3></li>
+			<li><h3><a href="http://www.qq.com">444444444444444444444444444</a></h3></li>
+			<li><h3><a href="http://www.qq.com">5555555555545555555555555</a></h3></li>
+			<li><h3><a href="http://www.qq.com">6666666666</a></h3></li>
+			<li><h3><a href="http://www.qq.com">7777777777777</a></h3></li>
+			<li><h3><a href="http://www.qq.com">888888888888</a></h3></li>
+			<li><h3><a href="http://www.qq.com">9999999999999</a></h3></li>
+			<li><h3><a href="http://www.qq.com">100000</a></h3></li>
+		</ul>
+		<div id="num"> <!--计数-->
+			1/10
+		</div>
+	</div>
+	<div id="focus_slider" class="focus_slider">   <!--缩略图-->
+			<span id="prev" class="prev"></span>
+			 <div class="mask">
+				 <ul>
+					<li class="current"><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/1.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/2.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /> </a></li>
+				</ul>
+			</div>
+			<span id="next" class="next"></span>
+	</div>
+</div>
+<!--code by wangchuang 2011.11.29-->       
+<script type="text/javascript">
+	(function(){
+		 function $(id){return document.getElementById(id)};
+		 function startMove(obj,attr,iTarget){     //轮换动画
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){doMove(obj,attr,iTarget);},30);
+		 }
+		 function doMove(obj,attr,iTarget){
+			 var iCur = 0;
+			 if(attr == 'opacity'){
+				iCur = parseInt(100 * getStyle(obj,attr)) || 0;
+			 }
+			 else{
+				iCur = parseInt(getStyle(obj,attr)) || 0;
+			 }
+			 var iSpeed = (iTarget - iCur)/8;
+			 iSpeed = (iSpeed>0) ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+			 if(iCur == iTarget){
+				 clearInterval(obj.timer);
+			 }
+			 else if(attr == 'opacity'){
+				obj.style.filter = 'alpha(opacity=' + (iCur + iSpeed) + ')';
+				obj.style.opacity = (iCur + iSpeed)/100;
+			 }
+			 else{
+				obj.style[attr] = iCur + iSpeed + 'px';
+			 }
+		 }
+		 function getStyle(obj,attr){      //取样式
+			 if(obj.currentStyle){
+				return obj.currentStyle[attr]; 
+			 }
+			 else{
+				return getComputedStyle(obj,false)[attr]; 
+			 }
+		 }
+			var aImg = $('focus_view').getElementsByTagName('li');
+			var aTxt = $('focus_text').getElementsByTagName('li');
+			var aSmg = $('focus_slider').getElementsByTagName('li');
+			var oUl = $('focus_slider').getElementsByTagName('ul')[0];
+			var oNum = $('num');
+			var oPrev = $('prev');
+			var oNext = $('next');
+			for(var i=0;i<aSmg.length;i++){
+				aSmg[i].index = i;  //当前添加索引
+				aSmg[i].onmouseover = function(){
+					for(var i=0;i<aSmg.length;i++){
+						aSmg[i].className = '';
+						aTxt[i].className = '';
+						startMove(aImg[i],'opacity',0);
+					}
+					aSmg[this.index].className = 'current';	
+					aTxt[this.index].className = 'show';
+					oNum.innerHTML = this.index+1 + '/10';
+					startMove(aImg[this.index],'opacity',100);
+				 }
+				oNext.onclick = oPrev.onclick = function(){
+					if(parseInt(oUl.style.marginLeft)<0){
+						startMove(oUl,'marginLeft',0);
+						for(var i=0;i<aSmg.length;i++){
+							aTxt[i].className = '';
+							startMove(aImg[i],'opacity',0);
+							aSmg[i].className = '';
+						}
+						startMove(aImg[0],'opacity',100);
+						aSmg[0].className = 'current';
+						aTxt[0].className = 'show';	
+						oNum.innerHTML = 1 + '/10';
+					}
+					else{
+						startMove(oUl,'marginLeft',-oUl.offsetWidth/2);
+						
+						for(var i=0;i<aSmg.length;i++){
+							aTxt[i].className = '';
+							startMove(aImg[i],'opacity',0);
+							aSmg[i].className = '';
+						}
+						startMove(aImg[aSmg.length/2],'opacity',100);
+						aSmg[aSmg.length/2].className = 'current';
+						aTxt[aSmg.length/2].className = 'show';	
+						oNum.innerHTML = (aSmg.length*0.5 + 1) + '/10';
+					}
+				} 
+			}
+		})();
+</script>
+		</td>
+	</tr>
+	<tr>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<style type="text/css">
+*{margin:0px;padding:0px;}
+li{list-style-type:none}
+img{border:none}    /*本行及本行以上可删*/
+
+#focus{width:625px; height:419px;overflow:hidden;position:relative}
+#focus .focus_view{width:625px;height:349px;overflow: hidden;}
+#focus .focus_view ul{position:relative;width:625px;height:349px;}
+#focus .focus_view li{position:absolute;width:625px;height:349px;top:0px;left:0px;filter:alpha(opacity:0);opacity:0}
+#focus .focus_view img{float:left;width:625px; height:350px;}
+#focus .focus_text{position:absolute;left:0;top:310px;padding: 0 15px;background:rgba(0,0,0,0.5);
+filter: progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#50000000',endColorstr = '#50000000')\9;
+width:595px;}
+#focus .focus_text h3{line-height:40px;height:40px;overflow:hidden;padding-right:40px;}
+#focus .focus_text h3 a{font-size:18px;color:#fff;font-family:"微软雅黑", "黑体", Arial, sans-serif;font-weight:normal;text-decoration:none}
+#focus .focus_text li{display:none;}
+#focus .focus_text li.show{display:block;}
+#focus .focus_slider{width:625px;height:64px; padding-top:6px; margin: 0 auto;}
+#focus .focus_slider .mask{width:590px;height:64px;overflow:hidden;float:left;margin-left:6px;display:inline;}
+#focus .focus_slider ul{width:1180px;margin-left:0px;}
+#focus .focus_slider li{float:left;width:118px;height:64px;display:inline;overflow: hidden;}
+#focus .focus_slider li img{filter:alpha(opacity:60);opacity:0.6;width:115px;height:64px;}
+#focus .focus_slider li a{display:block;width:115px;height:64px;overflow:hidden;background:#000;}
+#focus span.prev,#focus span.next{ float: left; width:13px; height:64px; cursor:pointer; margin:0;
+background-image:url(http://mat1.gtimg.com/news/wangchuang/theme_ui.png); background-repeat: no-repeat;}
+#focus span.prev{background-position: -710px -124px;}
+#focus span.next{background-position: -736px -124px;float:right;}
+#focus li.current img{filter:alpha(opacity:100);opacity:1}
+#focus #num{position:absolute;right:10px;top:10px;color:#fff;font-size:14px;}
+</style>
+<div id="focus">
+	<div id="focus_view" class="focus_view"> <!--大图-->
+		<ul>
+			<li style="filter:alpha(opacity:100);opacity:1"><a href="#1"><img id="bigimg_1" src="http://mat1.gtimg.com/news/wangchuang/1.jpg" /></a></li>
+			<li><a href="#2"><img src="http://mat1.gtimg.com/news/wangchuang/2.jpg" /></a></li>
+			<li><a href="#3"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /></a></li>
+			<li><a href="#4"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /></a></li>	
+			<li><a href="#3"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /></a></li>
+			<li><a href="#4"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /></a></li>
+			<li><a href="#5"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /></a></li>								
+		</ul>
+	</div>
+	<div id="focus_text" class="focus_text" >  <!--标题-->
+		<ul>
+			<li class="show"><h3><a href="http://www.qq.com">标题1标题1标题1标题1标题1标题1题1标题标题1标题1标题1标题1标题1标题1</a></h3></li>
+			<li><h3><a href="http://www.qq.com">文字2文字2文字2文字2文字2文字2</a></h3></li>
+			<li><h3><a href="http://www.qq.com">文字3文字3文字3文字3文字3文字3</a></h3></li>
+			<li><h3><a href="http://www.qq.com">444444444444444444444444444</a></h3></li>
+			<li><h3><a href="http://www.qq.com">5555555555545555555555555</a></h3></li>
+			<li><h3><a href="http://www.qq.com">6666666666</a></h3></li>
+			<li><h3><a href="http://www.qq.com">7777777777777</a></h3></li>
+			<li><h3><a href="http://www.qq.com">888888888888</a></h3></li>
+			<li><h3><a href="http://www.qq.com">9999999999999</a></h3></li>
+			<li><h3><a href="http://www.qq.com">100000</a></h3></li>
+		</ul>
+		<div id="num"> <!--计数-->
+			1/10
+		</div>
+	</div>
+	<div id="focus_slider" class="focus_slider">   <!--缩略图-->
+			<span id="prev" class="prev"></span>
+			 <div class="mask">
+				 <ul>
+					<li class="current"><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/1.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/2.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/3.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/4.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/5.jpg" /> </a></li>
+					<li><a href="http://www.qq.com"><img src="http://mat1.gtimg.com/news/wangchuang/6.jpg" /> </a></li>
+				</ul>
+			</div>
+			<span id="next" class="next"></span>
+	</div>
+</div>
+<!--code by wangchuang 2011.11.29-->       
+<script type="text/javascript">
+	(function(){
+		 function $(id){return document.getElementById(id)};
+		 function startMove(obj,attr,iTarget){     //轮换动画
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){doMove(obj,attr,iTarget);},30);
+		 }
+		 function doMove(obj,attr,iTarget){
+			 var iCur = 0;
+			 if(attr == 'opacity'){
+				iCur = parseInt(100 * getStyle(obj,attr)) || 0;
+			 }
+			 else{
+				iCur = parseInt(getStyle(obj,attr)) || 0;
+			 }
+			 var iSpeed = (iTarget - iCur)/8;
+			 iSpeed = (iSpeed>0) ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+			 if(iCur == iTarget){
+				 clearInterval(obj.timer);
+			 }
+			 else if(attr == 'opacity'){
+				obj.style.filter = 'alpha(opacity=' + (iCur + iSpeed) + ')';
+				obj.style.opacity = (iCur + iSpeed)/100;
+			 }
+			 else{
+				obj.style[attr] = iCur + iSpeed + 'px';
+			 }
+		 }
+		 function getStyle(obj,attr){      //取样式
+			 if(obj.currentStyle){
+				return obj.currentStyle[attr]; 
+			 }
+			 else{
+				return getComputedStyle(obj,false)[attr]; 
+			 }
+		 }
+			var aImg = $('focus_view').getElementsByTagName('li');
+			var aTxt = $('focus_text').getElementsByTagName('li');
+			var aSmg = $('focus_slider').getElementsByTagName('li');
+			var oUl = $('focus_slider').getElementsByTagName('ul')[0];
+			var oNum = $('num');
+			var oPrev = $('prev');
+			var oNext = $('next');
+			for(var i=0;i<aSmg.length;i++){
+				aSmg[i].index = i;  //当前添加索引
+				aSmg[i].onmouseover = function(){
+					for(var i=0;i<aSmg.length;i++){
+						aSmg[i].className = '';
+						aTxt[i].className = '';
+						startMove(aImg[i],'opacity',0);
+					}
+					aSmg[this.index].className = 'current';	
+					aTxt[this.index].className = 'show';
+					oNum.innerHTML = this.index+1 + '/10';
+					startMove(aImg[this.index],'opacity',100);
+				 }
+				oNext.onclick = oPrev.onclick = function(){
+					if(parseInt(oUl.style.marginLeft)<0){
+						startMove(oUl,'marginLeft',0);
+						for(var i=0;i<aSmg.length;i++){
+							aTxt[i].className = '';
+							startMove(aImg[i],'opacity',0);
+							aSmg[i].className = '';
+						}
+						startMove(aImg[0],'opacity',100);
+						aSmg[0].className = 'current';
+						aTxt[0].className = 'show';	
+						oNum.innerHTML = 1 + '/10';
+					}
+					else{
+						startMove(oUl,'marginLeft',-oUl.offsetWidth/2);
+						
+						for(var i=0;i<aSmg.length;i++){
+							aTxt[i].className = '';
+							startMove(aImg[i],'opacity',0);
+							aSmg[i].className = '';
+						}
+						startMove(aImg[aSmg.length/2],'opacity',100);
+						aSmg[aSmg.length/2].className = 'current';
+						aTxt[aSmg.length/2].className = 'show';	
+						oNum.innerHTML = (aSmg.length*0.5 + 1) + '/10';
+					}
+				} 
+			}
+		})();
+</script>
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p><span class="author">chuangwang</span>  2012.12.06 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

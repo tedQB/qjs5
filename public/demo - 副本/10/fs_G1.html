@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>焦点图</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+
+<script type="text/javascript" src="http://mat1.gtimg.com/www/js/Koala/Koala.min.1.5.js"></script> 
+<script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});  
+Qfast.add('widgets',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+    Qfast(true,'widgets',function(){
+		K.tabs({
+			id: 'fsG1',   //焦点图包裹id
+			conId: "G1fPic",  //** 大图域包裹id
+			numId:'curNum', 
+			totalId:'totalNum', 
+			auto: 1,   //自动播放
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+ 			conCn: '.fcon', //** 大图域配置class
+			bns: ['.prev', '.next'],//** 前后按钮配置class
+			interval: 1000  //** 停顿时间
+		});
+
+	})
+</script>
+    <style type="text/css">
+.fs_G1{ height:366px; position:relative; background:#fff; border:1px solid #333; width:352px; position:relative;  }
+.fs_G1 .G1fBt{ position:absolute; top:284px; left:8px; overflow:hidden; zoom:1; }
+.fs_G1  .fcon{ position:relative; height:272px; width:335px; float:left;  display:none; background:#000  }
+.fs_G1 .shadow{ width:335px; position:absolute; top:238px; left:0px; height:34px; background:rgba(0,0,0,0.6);  
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:center; }
+.fs_G1 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+.fs_G1 .G1fBt li{ float:left; font-size:14px; margin-right:2px; display:inline; width:78px; height:70px; padding:2px; cursor:pointer;  }
+.fs_G1 .G1fBt li img{ display:block; width:78px; height:70px; }
+.fs_G1 .G1fBt li.current{ cursor:pointer; background:#F3C03B} 
+.fs_G1 .G1fBt li.current img{ margin-bottom:-4px}
+.fs_G1 .fcon img{ height:272px; width:335px; display:block; }
+.fs_G1 .prev{ width:6px;height:12px;right:54px;top:15px;  background:url(http://mat1.gtimg.com/news/base2011/foucs/img/I_btn_left.png); overflow:hidden;font-size:12px; position:absolute; cursor:pointer;  }
+.fs_G1 .next{ width:6px;height:12px;right:14px;top:15px;  background:			url(http://mat1.gtimg.com/news/base2011/foucs/img/I_btn_right.png); overflow:hidden;font-size:12px; position:absolute; cursor:pointer; }
+.fs_G1 .fPs{ height:288px; position:relative; overflow:visible; margin:8px 0 0 8px; }
+.fs_G1 .fPic{  position:absolute; }
+.G1Num{ position:absolute; z-index:10; color:#ccc;  top:14px; left:305px; font-family:Arial;  } 
+#curNum{ color:#FFA800; }
+    </style>
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>焦点图</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><a href="javascript:void(0)">焦点图</a><i>&gt;</i><span>效果A</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top"><div class="cMode">
+            <!--HTML结构开始，请勿修改-->  
+<div id="wrap">
+    <div id="fsG1" class="fs_G1">
+            <div class="fPs">             
+                <div id="G1fPic" class="fPic">
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_1.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text1text1text1text1text1</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_2.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text2text2text2text2text2</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_3.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text3text3text3text3text3</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_4.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                </div>
+            </div>
+			<ul class="G1fBt">
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_1_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_2_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_3_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_4_1.jpg">
+				</li>
+			</ul>
+			<span class="prev"></span> 
+			<span class="next"></span>
+			<div class="G1Num">
+				<span id="curNum"></span>/<span id="totalNum"></span>
+			</div>
+    </div>
+</div>
+	<script type="text/javascript">
+		K(function(){ 			
+			   var globalVar,html;			
+			   html=K("wrap").html();
+			   K("clicks").click(function(){ 
+				K("fsG1").remove();
+				K("wrap").html(html);				
+				   var option={
+						magic:K('sel').node.value,
+						eType:K('sel2').node.value,
+						interval:K('sel3').node.value,
+						auto:parseInt(K('sel4').node.value)
+					 };  
+					setTimeout(function(){
+						K.tabs({	
+							id: 'fsG1',   //焦点图包裹id
+							conId: 'G1fPic',  //** 大图域包裹id		
+							numId:'curNum', 
+							totalId:'totalNum', 
+							conCn: '.fcon', //** 大图域配置class			
+							auto: option.auto,   //自动播放
+							effect: option.magic,   //效果配置
+							eType: option.eType, //** 鼠标事件	
+							bns: ['.prev', '.next'],//** 前后按钮配置class							
+							interval: option.interval  //** 停顿时间
+						});  
+					},100)	   
+		var code=	"K.tabs({ id: 'fsG1', conId: 'G1pic1', numId:'curNum', totalId:'totalNum', conCn: '.fcon', auto: "+option.auto+",  effect: '"+option.magic+"',  eType: '"+option.eType+"', bns:['.prev','.next'], interval: "+option.interval+" })";  	
+	K("int").html(code).css({ width:parseInt(KK(".cMode").item(0).css("min-width"))-10+"px"});	
+			 });			
+			   
+		});
+	</script>
+	<div class="add">
+	<div style="height:40px; line-height:40px; ">
+		<select name="fid"  id="sel" style="font-size:12px;width:115x;" >
+			<option  value="fade">效果选择</option>
+			<option value="def" style="background-color: #F2FFD3;">default</option>
+			<option value="fade" style="background-color: #F2FFD3;">fade</option>
+		</select>
+		<select id="sel2">
+			<option  value="mouseover">选择鼠标事件</option>
+			<option value="click" style="background-color: #F2FFD3;">click</option>	
+			<option value="mouseover" style="background-color: #F2FFD3;">mouseover</option>
+		</select>
+		<select id="sel3">
+			<option  value="2000">选择切换时间</option>
+			<option value="1000" style="background-color: #F2FFD3;">1000</option>	
+			<option value="2000" style="background-color: #F2FFD3;">2000</option>	
+			<option value="3000" style="background-color: #F2FFD3;">3000</option>	
+			<option value="4000" style="background-color: #F2FFD3;">4000</option>	
+		</select>
+		<select id="sel4">
+			<option  value="1">是否自动</option>
+			<option value="0" style="background-color: #F2FFD3;">不自动</option>	
+			<option value="1" style="background-color: #F2FFD3;">自动</option>	
+		</select>
+		<input type="button"  value="生成" id="clicks" />
+	</div>
+	<div style=" font:14px/20px '微软雅黑'">
+	配置后可更换参数，<span>注：替换Qfast(false,'widgets',function(){ <span style="color:red">K.tabs({ })</span> } ) 即可</span>
+	</div>
+	<br />
+	<div id="int" style="color:#666; font:14px/20px '微软雅黑'; ">
+
+	</div>				
+	</div>			
+          </div>
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top">
+		<textarea name="code" class="html" id="code">
+    <style type="text/css">
+.fs_G1{ height:366px; position:relative; background:#fff; border:1px solid #333; width:352px; position:relative;  }
+.fs_G1 .G1fBt{ position:absolute; top:284px; left:8px; overflow:hidden; zoom:1; }
+.fs_G1  .fcon{ position:relative; height:272px; width:335px; float:left;  display:none; background:#000 }
+.fs_G1 .shadow{ width:335px; position:absolute; top:238px; left:0px; height:34px; background:rgba(0,0,0,0.6);  
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:center; }
+.fs_G1 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+.fs_G1 .G1fBt li{ float:left; font-size:14px; margin-right:2px; display:inline; width:78px; height:70px; padding:2px;  }
+.fs_G1 .G1fBt li img{ display:block; width:78px; height:70px; }
+.fs_G1 .G1fBt li.current{ cursor:pointer; background:#F3C03B} 
+.fs_G1 .G1fBt li.current img{ margin-bottom:-4px}
+.fs_G1 .fcon img{ height:272px; width:335px; display:block; }
+.fs_G1 .prev{ width:6px;height:12px;right:54px;top:15px;  background:url(http://mat1.gtimg.com/news/base2011/foucs/img/I_btn_left.png); overflow:hidden;font-size:12px; position:absolute; cursor:pointer;  }
+.fs_G1 .next{ width:6px;height:12px;right:14px;top:15px;  background:			url(http://mat1.gtimg.com/news/base2011/foucs/img/I_btn_right.png); overflow:hidden;font-size:12px; position:absolute; cursor:pointer; }
+.fs_G1 .fPs{ height:288px; position:relative; overflow:visible; margin:8px 0 0 8px; }
+.fs_G1 .fPic{  position:absolute; }
+.G1Num{ position:absolute; z-index:10; color:#ccc;  top:14px; left:305px; font-family:Arial;  } 
+#curNum{ color:#FFA800; }
+    </style>
+	<!--HTML结构开始-->
+    <div id="fs_G1" class="fs_G1">
+            <div class="fPs">             
+                <div id="G1fPic" class="fPic">
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_1.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text1text1text1text1text1</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_2.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text2text2text2text2text2</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_3.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text3text3text3text3text3</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/H_4.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                </div>
+            </div>
+			<ul class="G1fBt">
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_1_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_2_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_3_1.jpg">
+				</li>
+				<li>
+					<img src="http://mat1.gtimg.com/news/base2011/foucs/img/H_4_1.jpg">
+				</li>
+			</ul>
+			<span class="prev"></span> 
+			<span class="next"></span>
+			<div class="G1Num">
+				<span id="curNum"></span>/<span id="totalNum"></span>
+			</div>
+    </div>
+    <!--HTML结构开始-->
+	<!--JS调取参数配置开始 -->
+<script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});  
+Qfast.add('widgets',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+    Qfast(false,'widgets',function(){
+		K.tabs({
+			id: 'fs_G1',   //焦点图包裹id
+			conId: "G1fPic",  //** 大图域包裹id
+			numId:'curNum',
+			totalId:'totalNum',
+			auto: 1,   //自动播放
+			effect: 'fade',   //效果配置
+			eType: 'click', //** 鼠标事件
+ 			conCn: '.fcon', //** 大图域配置class
+			bns: ['.prev', '.next'],//** 前后按钮配置class
+			interval: 1000  //** 停顿时间
+		});
+	})
+</script>
+    <!--JS调取参数配置结束 -->
+		</textarea>
+</td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<style>
+			.dp-highlighter .bar{ display:block; padding-left:15px;  }
+			.cMode{ min-width:550px;  }
+			.fs_G1{ margin:0 auto; }
+			#wrap{ overflow:hidden; }
+</style>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

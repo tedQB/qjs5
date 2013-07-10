@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>InnerJS</title>
+<style>
+textarea, #mainBox{ margin:10px 0;}
+textarea{ display:block; width:100%;height:150px;}
+#mainBox{ border-top:2px solid #369; background:#EFEFEF;}
+</style>
+	
+
+</head>
+<body>
+<h2>InnerJS</h2>
+   <style type="text/css">  
+.fs_A5{ height:200px; position:relative; background:transparent; width:310px; position:relative; }  
+.fs_A5 .A5fBt{ position:absolute; top:175px; left:227px; overflow:hidden; zoom:1;  height:16px; z-index:10; }  
+.fs_A5 .shadow{ width:310px; position:absolute; top:165px; left:0px; z-index:10; height:34px; background:rgba(0,0,0,0.6);    
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:left; }  
+.fs_A5 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; margin-left:10px; }  
+.fs_A5 .fcon{ position:relative; width:310px; float:left;   }  
+.fs_A5 .A5fBt i{font-style:normal }    
+.fs_A5 .A5fBt a{display:inline;float:left;background:#000;width:18px;height:15px;position:relative;    
+margin:0 1px 0 0;color:#B0B0B0;font:12px/15px "宋体";text-decoration:none; text-align:center; outline:0 }  
+.fs_A5 .A5fBt a:hover,.fs_A5 .A5fBt a.current{ background:#CB0E02;color:#fff}  
+.fs_A5 .fcon img{ display:block; }  
+.fs_A5 .fix{ position:relative; height:9999px; height:200px;  }  
+.fs_A5 .fPs{height:100%; overflow:hidden; position:relative;  }  
+    </style>  
+    <!--HTML结构开始-->  
+    <div id="fs_A5" class="fs_A5">  
+        <div class="fPs">  
+            <div class="fix">  
+                <div id="A5fPic" class="fPic">  
+                    <div class="fcon">  
+                        <a target="_blank" href="#">  
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_1.jpg"></a> <span class="shadow">  
+                                <a target="_blank" href="#">text1text1text1text1text1</a> </span>  
+                    </div>  
+                    <div class="fcon">  
+                        <a target="_blank" href="#">  
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_2.jpg"></a> <span class="shadow">  
+                                <a target="_blank" href="#">text2text2text2text2text2</a> </span>  
+                    </div>  
+                    <div class="fcon">  
+                        <a target="_blank" href="#">  
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_3.jpg"></a> <span class="shadow">  
+                                <a target="_blank" href="#">text3text3text3text3text3</a> </span>  
+                    </div>  
+                    <div class="fcon">  
+                        <a target="_blank" href="#">  
+                            <img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/D_4.jpg"></a> <span class="shadow">  
+                                <a target="_blank" href="#">text4text4text4text4text4</a> </span>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+        <div class="A5fBt" id="A5fBt">  
+            <a href="javascript:void(0)" hidefocus="true" target="_self"><i>1</i></a>  
+            <a href="javascript:void(0)" hidefocus="true" target="_self"><i>2</i></a>  
+            <a href="javascript:void(0)" hidefocus="true" target="_self"><i>3</i></a>  
+            <a href="javascript:void(0)" hidefocus="true" target="_self"><i>4</i></a>  
+        </div>  
+	</div>  
+    <script type="text/javascript">  
+        Qfast.add('fx', { path: "http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js", type: "js" });  
+        Qfast.add('widgets', { path: "http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js", type: "js", requires: ['fx'] });  
+        Qfast(true, 'widgets', function () {  
+            K.tabs({  
+                id: 'fs_A5',   //焦点图包裹id  
+                conId: "A5fPic",  //** 大图域包裹id  
+                tabId:"A5fBt", //** 按钮域包裹id  
+                tabTn:"a", // ** 按钮配置元素  
+                conCn: '.fcon', //** 大图域配置class           
+                auto: 1,   //自动播放  
+                effect: 'fxslide',   //效果配置  
+                fxOption:{   
+                    speed:1000,  
+                    magic:'swingTo'  
+                },                
+                vertical:'top', //焦点图滚动方向                 
+                eType: 'mouseover', //** 鼠标事件  
+                pageBt:true,//是否有按钮切换页码  
+                interval: 2000  //** 停顿时间  
+            })  
+  
+        })  
+  
+    </script>  
+<script type="text/javascript">
+
+		Qfast(true,'ready',function(){ 			
+		   var globalVar,html;			
+		   html=K("fs_A5").html();
+
+		   K("click").click(function(){ 
+			   var option={
+					magic:K('sel').node.value,
+					eType:K('sel2').node.value,
+					interval:K('sel3').node.value,
+					auto:K('sel4').node.value
+			   }
+				K("fs_A5").html(html);
+				console.log(option.auto);
+				K.tabs({  
+					id: 'fs_A5',   //焦点图包裹id  
+					conId: 'A5fPic',  //** 大图域包裹id  
+					tabId:'A5fBt', //** 按钮域包裹id  
+					tabTn:'a', // ** 按钮配置元素  
+					conCn: '.fcon', //** 大图域配置class           
+					auto: parseInt(option.auto),   //自动播放  
+					effect: 'fxslide',   //效果配置  
+					fxOption:{   
+						speed:1000,  
+						magic:option.magic  
+					},                
+					vertical:'top', //焦点图滚动方向                 
+					eType: option.eType, //** 鼠标事件  
+					pageBt:true,//是否有按钮切换页码  
+					interval:option.interval  //** 停顿时间  
+				}); 			   
+		   
+var code="K.tabs({  id: 'fs_A5',   conId: 'A5fPic',  tabId:'A5fBt',tabTn:'a', conCn: '.fcon', auto: "+option.auto+", effect: 'fxslide',  fxOption:{   speed:1000,  magic:"+option.magic+"  },  vertical:'top',  eType: "+option.eType+", pageBt:true, interval:"+option.interval+"  })" ;
+K("int").html(code);		 
+		 })			
+		
+			
+			   
+		})
+
+</script>
+<select name="fid"  id="sel" style="font-size:12px;width:115x;"  onchange>
+	<option  value="swingTo">选择效果配置</option>
+	<option value="linear" style="background-color: #F2FFD3;">linear</option>
+	<option value="easeIn" style="background-color: #F2FFD3;">easeIn</option>
+	<option value="easeOut" style="background-color: #F2FFD3;">easeOut</option>
+	<option value="easeBoth" style="background-color: #F2FFD3;">easeBoth</option>
+	<option value="easeInStrong" style="background-color: #F2FFD3;">easeInStrong</option>
+	<option value="easeOutStrong" style="background-color: #F2FFD3;">easeOutStrong</option>
+	<option value="easeBothStrong" style="background-color: #F2FFD3;">easeBothStrong</option>
+	<option value="easeOutQuart" style="background-color: #F2FFD3;">easeOutQuart</option>
+	<option value="easeInOutExpo" style="background-color: #F2FFD3;">easeInOutExpo</option>
+	<option value="easeOutExpo" style="background-color: #F2FFD3;">easeOutExpo</option>
+	<option value="swingFrom" style="background-color: #F2FFD3;">swingFrom</option>
+	<option value="swingTo" style="background-color: #F2FFD3;">swingTo</option>
+	<option value="backIn" style="background-color: #F2FFD3;">backIn</option>
+	<option value="backOut" style="background-color: #F2FFD3;">backOut</option>
+	<option value="bounce" style="background-color: #F2FFD3;">bounce</option>
+</select>
+<select id="sel2">
+	<option  value="mouseover">选择鼠标事件</option>
+	<option value="click" style="background-color: #F2FFD3;">click</option>	
+	<option value="mouseover" style="background-color: #F2FFD3;">mouseover</option>
+</select>
+<select id="sel3">
+	<option  value="2000">选择切换时间</option>
+	<option value="1000" style="background-color: #F2FFD3;">1000</option>	
+	<option value="2000" style="background-color: #F2FFD3;">2000</option>	
+	<option value="3000" style="background-color: #F2FFD3;">3000</option>	
+	<option value="4000" style="background-color: #F2FFD3;">4000</option>	
+</select>
+<select id="sel4">
+	<option  value="1">是否自动</option>
+	<option value="0" style="background-color: #F2FFD3;">不自动</option>	
+	<option value="1" style="background-color: #F2FFD3;">自动</option>	
+</select>
+<input type="button"  value="Try" id="click" />
+配置后效果
+<div id="int">
+
+</div>
+
+</body>
+</html>

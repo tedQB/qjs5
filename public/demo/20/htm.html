@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>flash视频播放器</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>flash视频播放器</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><span>flash视频播放器</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+		<object width="400px" height="300px" id="flashplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+	<param name="movie" value="http://static.video.qq.com/TencentPlayer.swf">
+	<param name="quality" value="high">
+	<param name="wmode" value="transparent">
+	<param name="allowScriptAccess" value="always">
+	<param name="allowFullScreen" value="true">
+	<param name="flashvars" value="skin=http%3A//imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;f=3&amp;vid=82CPBNHOFpY&amp;cgi=http%3A//cgi.video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56&amp;list=0&amp;auto=0&amp;pic=http://mat1.gtimg.com/news/base2011/img/player.jpg&amp;title=&amp;evs">
+	<embed width="400px" height="300px" src="http://static.video.qq.com/TencentPlayer.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" flashvars="skin=http%3A//imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;f=3&amp;vid=7sZIa3gJg3W&amp;cgi=http%3A//cgi.video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56&amp;list=0&amp;auto=0&amp;pic=http://mat1.gtimg.com/news/base2011/img/player.jpg&amp;title=&amp;evs" wmode="transparent">
+</object>
+<!--#include virtual="/public/final09/html5video_js.htm"-->
+<!--html5代码(针对flash播放器，木有不加)-->
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<!--第一处需要修改宽高的地方-->		
+<object width="400px" height="300px" id="flashplayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+	<param name="movie" value="http://static.video.qq.com/TencentPlayer.swf">
+	<param name="quality" value="high">
+	<param name="wmode" value="transparent">
+	<param name="allowScriptAccess" value="always">
+	<param name="allowFullScreen" value="true">
+	<param name="flashvars" value="skin=http%3A//imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;f=3&amp;vid=82CPBNHOFpY&amp;cgi=http%3A//cgi.video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56&amp;list=0&amp;auto=0&amp;pic=http://mat1.gtimg.com/news/base2011/img/player.jpg&amp;title=&amp;evs"><!--vid是关键参数，代表视频的唯一编号；pic是封面-->
+	<!--这里还有一处需要修改宽高-->
+	<embed width="400px" height="300px" src="http://static.video.qq.com/TencentPlayer.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" flashvars="skin=http%3A//imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;f=3&amp;vid=7sZIa3gJg3W&amp;cgi=http%3A//cgi.video.qq.com/bin/vrank%3Ftype%3D8%26start%3D49%26end%3D56&amp;list=0&amp;auto=0&amp;pic=http://mat1.gtimg.com/news/base2011/img/player.jpg&amp;title=&amp;evs" wmode="transparent"><!--pic是封面-->
+</object>
+<!--统计代码-->
+<iframe src=" http://v.qq.com/video/playview.html?vid=9sA9cS4fxSiC" width="0px" height="0px"></iframe><!--vid="视频id"-->
+<!--#include virtual="/public/final09/html5video_js.htm"-->
+<!--html5代码(针对flash播放器，木有不加)-->
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p><span class="author">boqiu</span>  2011.10.21 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

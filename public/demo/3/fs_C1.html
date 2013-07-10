@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>焦点图</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+    <script type="text/javascript" src="http://mat1.gtimg.com/www/js/Koala/Koala.min.1.5.js"></script>
+    <script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});  
+Qfast.add('widgets',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+    Qfast(true,'widgets',function(){
+		K.tabs({
+			id: 'fs_C1',   //焦点图包裹id
+			conId: "C1Pic",  //** 大图域包裹id
+ 			conCn: '.fcon', //** 大图域配置class	
+            tabOption:{ 
+				tabwr:'.C1Bt',	//** 按钮图片域配置class
+				tabnum:5,		//** 点击next,prev按钮一次点击按钮图片滑动单元按钮个数，如有10个按钮，只显示5个，隐藏5个，推荐配置为5
+				shownum:5	//** 配置显示按钮图片个数
+			},			
+			auto: 1,   //自动播放
+			effect: 'def',   //效果配置
+			eType: 'mouseover', //** 鼠标事件		
+			bns: ['.prev', '.next'],//** 前后按钮配置class
+			interval: 1000  //** 停顿时间
+		})
+	})
+    </script>
+    <style type="text/css">
+.fs_C1{ height:465px; position:relative; background:#fff; border:1px solid #333; width:700px; position:relative; }
+.fs_C1 .C1Bt{ position:absolute; top:390px; left:23px; overflow:hidden; zoom:1;  width:658px }
+.fs_C1 .fcon{ position:relative; height:370px; width:691px; float:left;  display:none;  }
+.fs_C1 .shadow{ width:680px; position:absolute; top:336px; left:0px; height:34px; background:rgba(0,0,0,0.6);  
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:center; }
+.fs_C1 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+.fs_C1 .C1Bt li{ float:left; font-size:14px; padding:0 10px 0 0; display:inline; width:123px; height:64px; }
+.fs_C1 .C1Bt li.fix{ padding-right:0px; }
+.fs_C1 .C1Bt li img{ display:block; width:123px; height:64px;}
+.fs_C1 .C1Bt li.current{  cursor:pointer; width:123px; height:64px; } 
+.fs_C1 .C1Bt li.current img{ margin-bottom:-4px; width:121px; height:62px; border:1px solid #e8000e; }
+.fs_C1 .fcon img{ width:680px; height:370px; display:block; }
+.fs_C1 .prev{ position:absolute; left:0px; top:390px; width:13px; height:64px; background:url(http://mat1.gtimg.com/joke/Koala/pic/btn_l.png) no-repeat; cursor:pointer}
+.fs_C1 .next{ position:absolute; right:0px; top:390px; width:13px; height:64px; background:url(http://mat1.gtimg.com/joke/Koala/pic/btn_r.png) no-repeat; cursor:pointer}
+.fs_C1 .fPs{ height:288px; position:relative; overflow:visible; margin:8px 0 0 8px; }
+.fs_C1 .fPic{  position:absolute; }
+.fs_C1 .fbtFix{ width:9999px;  }
+    </style>
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>焦点图</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><a href="javascript:void(0)">焦点图</a><i>&gt;</i><span>效果A</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top"><div class="cMode">
+    <div id="fs_C1" class="fs_C1">
+            <div class="fPs">             
+                <div id="C1Pic" class="fPic">
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/1_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text1text1text1text1text1</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/2_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text2text2text2text2text2</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/3_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text3text3text3text3text3</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/4_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/5_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/6_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/7_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/8_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>					
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/9_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/10_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>					
+				</div>
+            </div>
+			<div class="C1Bt">
+				<div class="fbtFix">
+					<ul class="count">
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_1.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_2.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_3.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_4.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_5.png">
+						</li>		
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_6.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_7.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_8.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_9.png">
+						</li>	
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_10.png">
+						</li>							
+					</ul>					
+				</div>
+			</div>
+			<span class="prev"></span> 
+			<span class="next"></span>
+    </div>
+          </div>
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top">
+		<textarea name="code" class="html" id="code">
+<style type="text/css">
+.fs_C1{ height:465px; position:relative; background:#fff; border:1px solid #333; width:700px; position:relative; }
+.fs_C1 .C1Bt{ position:absolute; top:390px; left:23px; overflow:hidden; zoom:1;  width:658px }
+.fs_C1 .fcon{ position:relative; height:370px; width:691px; float:left;  display:none;  }
+.fs_C1 .shadow{ width:680px; position:absolute; top:336px; left:0px; height:34px; background:rgba(0,0,0,0.6);  
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;  display:block; line-height:34px; text-align:center; }
+.fs_C1 .shadow a{ text-decoration:none; color:#fff; font-size:14px; font-weight:bolder; overflow:hidden; }
+.fs_C1 .C1Bt li{ float:left; font-size:14px; padding:0 10px 0 0; display:inline; width:123px; height:64px; }
+.fs_C1 .C1Bt li.fix{ padding-right:0px; }
+.fs_C1 .C1Bt li img{ display:block; width:123px; height:64px;}
+.fs_C1 .C1Bt li.current{  cursor:pointer; width:123px; height:64px; } 
+.fs_C1 .C1Bt li.current img{ margin-bottom:-4px; width:121px; height:62px; border:1px solid #e8000e; }
+.fs_C1 .fcon img{ width:680px; height:370px; display:block; }
+.fs_C1 .prev{ position:absolute; left:0px; top:390px; width:13px; height:64px; background:url(http://mat1.gtimg.com/joke/Koala/pic/btn_l.png) no-repeat; cursor:pointer}
+.fs_C1 .next{ position:absolute; right:0px; top:390px; width:13px; height:64px; background:url(http://mat1.gtimg.com/joke/Koala/pic/btn_r.png) no-repeat; cursor:pointer}
+.fs_C1 .fPs{ height:288px; position:relative; overflow:visible; margin:8px 0 0 8px; }
+.fs_C1 .fPic{  position:absolute; }
+.fs_C1 .fbtFix{ width:9999px;  }
+</style>	
+	<!--HTML结构开始-->
+    <div id="fs_C1" class="fs_C1">
+            <div class="fPs">             
+                <div id="C1Pic" class="fPic">
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/1_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text1text1text1text1text1</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/2_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text2text2text2text2text2</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/3_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text3text3text3text3text3</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/4_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/5_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/6_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/7_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/8_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>					
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/9_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>
+                    <div class="fcon">
+                        <a target="_blank" href="#">
+                            <img alt="" src="http://mat1.gtimg.com/joke/Koala/pic/10_b.jpg"></a>
+                            <span class="shadow">
+                                <a target="_blank" href="#">text4text4text4text4text4</a> 
+                            </span>
+                    </div>					
+				</div>
+            </div>
+			<div class="C1Bt">
+				<div class="fbtFix">
+					<ul class="count">
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_1.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_2.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_3.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_4.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_5.png">
+						</li>		
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_6.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_7.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_8.png">
+						</li>
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_9.png">
+						</li>	
+						<li>
+							<img src="http://mat1.gtimg.com/joke/Koala/pic/s_10.png">
+						</li>							
+					</ul>					
+				</div>
+			</div>
+			<span class="prev"></span> 
+			<span class="next"></span>
+    </div>
+    <!--HTML结构开始-->
+	<!--JS调取参数配置开始 -->
+<script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});  
+Qfast.add('widgets',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+    Qfast(false,'widgets',function(){
+		K.tabs({
+			id: 'fs_C1',   //焦点图包裹id
+			conId: "C1Pic",  //** 大图域包裹id
+ 			conCn: '.fcon', //** 大图域配置class	
+            tabOption:{ 
+				tabwr:'.C1Bt',	//** 按钮图片域配置class
+				tabnum:5,		//** 点击next,prev按钮一次点击按钮图片滑动单元按钮个数，如有10个按钮，只显示5个，隐藏5个，推荐配置为5
+				shownum:5	//** 配置显示按钮图片个数
+			},			
+			auto: 1,   //自动播放
+			effect: 'def',   //效果配置
+			eType: 'mouseover', //** 鼠标事件		
+			bns: ['.prev', '.next'],//** 前后按钮配置class
+			interval: 1000  //** 停顿时间
+		})
+	})
+</script>
+    <!--JS调取参数配置结束 -->
+		</textarea>
+</td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<style>
+			.dp-highlighter .bar{ display:block; padding-left:15px;  }	
+</style>
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

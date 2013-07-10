@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gb2312">
+<title>焦点图</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+
+<script type="text/javascript" src="http://mat1.gtimg.com/www/js/Koala/Koala.min.1.5.js"></script>  
+
+<script type="text/javascript">        
+        Qfast.add('fx', { path: "http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js", type: "js" });
+        Qfast.add('widgets', { path: "http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js", type: "js", requires: ['fx'] });
+        Qfast(true, 'widgets', function () {
+            K.tabs({
+                id: 'fsE3',   //焦点图包裹id
+                conId: "E3pic1",  //** 大图域包裹id
+				tabId:"E3fBt",
+				tabTn:"a",
+	            conCn: '.fcon', //** 大图域配置class			
+                auto: 1,   //自动播放
+                effect: 'slide',   //效果配置
+				vertical:'top',
+				eType: 'mouseover', //** 鼠标事件
+				pageBt:true,//是否有按钮切换页码
+                interval: 2000  //** 停顿时间
+            })
+        })
+    </script>
+    <style type="text/css">
+.fs_E3{ height:195px; position:relative; background:transparent; width:310px; position:relative; }
+.fs_E3 .E3fBt{ position:absolute; top:180px; left:232px; overflow:hidden; zoom:1;  height:16px; z-index:10; }
+.fs_E3 .shadow a{ text-decoration:none; color:#ffffff; font-size:14px; font-weight:bolder; overflow:hidden; margin-left:10px; }
+.fs_E3 .fcon{ position:relative; float:left;  }
+.fs_E3 .E3fBt i{font-style:normal }  
+.fs_E3 .E3fBt a{display:inline;float:left;background:#87897E;width:18px;height:15px;position:relative;  
+margin:0 1px 0 0;color:#ffffff;font:12px/15px "宋体";text-decoration:none; text-align:center; outline:0 }
+.fs_E3 .E3fBt a:hover,.fs_E3 .E3fBt a.current{ background:#FF7E00;color:#fff}
+.fs_E3 .fcon img{ display:block; }
+.fs_E3 .fix{ position:relative; height:195px; overflow:hidden; }  
+.fs_E3 .fPs{ width:100%; overflow:hidden; position:relative;  }  
+    </style>
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>焦点图</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><a href="javascript:void(0)">焦点图</a><i>&gt;</i><span>效果A</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+		<div class="cMode">
+            <!--HTML结构开始，请勿修改-->  
+			<div id="wrap">
+				<div id="fsE3" class="fs_E3">
+					<div class="fPs">
+						<div class="fix">
+							<div id="E3pic1" class="fPic">
+								<div class="fcon">
+									<a target="_blank" href="#">
+										<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_1.jpg"></a> 
+								</div>
+								<div class="fcon">
+									<a target="_blank" href="#">
+										<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_2.jpg"></a> 
+								</div>
+								<div class="fcon">
+									<a target="_blank" href="#">
+										<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_3.jpg"></a> 
+								</div>
+								<div class="fcon">
+									<a target="_blank" href="#">
+										<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_4.jpg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="E3fBt" id="E3fBt">
+						<a href="javascript:void(0)" hidefocus="true" target="_self"><i>1</i></a>
+						<a href="javascript:void(0)" hidefocus="true" target="_self"><i>2</i></a>
+						<a href="javascript:void(0)" hidefocus="true" target="_self"><i>3</i></a>
+						<a href="javascript:void(0)" hidefocus="true" target="_self"><i>4</i></a>
+					</div>
+				</div>
+			</div>
+<script type="text/javascript">
+				function addbtn(value){ 
+					value=='fxslide'?K("sel5").css("display:inline-block"):K("sel5").hide();
+				}			
+				K(function(){ 			
+					   var globalVar,html;			
+					   html=K("wrap").html();
+					   K("clicks").click(function(){ 
+						K("fsE3").remove();
+						K("wrap").html(html);				
+						   var option={
+								magic:K('sel').node.value,
+								eType:K('sel2').node.value,
+								interval:K('sel3').node.value,
+								auto:parseInt(K('sel4').node.value),
+								fxmagic:K('sel5').node.value								
+							 };  
+							if(K("sel5").node.style.display=="none"){
+								setTimeout(function(){		
+									K.tabs({
+											id: 'fsE3',   //焦点图包裹id
+											conId: "E3pic1",  //** 大图域包裹id
+											tabId:"E3fBt",
+											tabTn:"a",
+											conCn: '.fcon', //** 大图域配置class			
+											auto: option.auto,   //自动播放
+											effect: option.magic,   //效果配置
+											vertical:'top',
+											eType: option.eType, //** 鼠标事件
+											pageBt:true,//是否有按钮切换页码					
+											interval: option.interval //** 停顿时间							
+										});  
+									},100);					
+									var code=	"K.tabs({ id: 'fsE3',  conId: 'E3pic1', tabId:'E3fBt', tabTn:'a', conCn: '.fcon', auto: "+option.auto+", effect: '"+option.magic+"', vertical:'top', eType: '"+option.eType+"', pageBt:true, interval: "+option.interval+" })";  	
+								}else{
+										K.tabs({
+											id: 'fsE3',   //焦点图包裹id
+											conId: "E3pic1",  //** 大图域包裹id
+											tabId:"E3fBt",
+											tabTn:"a",
+											conCn: '.fcon', //** 大图域配置class			
+											auto: option.auto,   //自动播放
+											effect: option.magic,   //效果配置
+											vertical:'top',
+											fxOption:{
+												speed:1000,
+												magic:option.fxmagic
+											},
+											eType: option.eType, //** 鼠标事件
+											pageBt:true,//是否有按钮切换页码					
+											interval: option.interval //** 停顿时间							
+										});  				
+								var code=	"K.tabs({ id: 'fsE3',  conId: 'E3pic1', tabId:'E3fBt', tabTn:'a', conCn: '.fcon', auto: "+option.auto+", effect: '"+option.magic+"', vertical:'top', fxOption:{ speed:1000, magic:'"+option.fxmagic+"'} eType: '"+option.eType+"', pageBt:true, interval: "+option.interval+" })";  										
+								}
+								K("int").html(code).css({ width:parseInt(KK(".cMode").item(0).css("min-width"))-10+"px"});	
+					 });			
+					   
+				});
+</script>
+<div class="add">
+<div style="height:40px; line-height:40px; ">
+	<select name="fid"  id="sel" style="font-size:12px;width:115x;" onchange="addbtn(this.value)">
+		<option  value="slide">效果选择</option>
+		<option value="fxslide" style="background-color: #F2FFD3;">fxslide</option>
+		<option value="slide" style="background-color: #F2FFD3;">slide</option>
+	</select>
+	<select id="sel2">
+		<option  value="mouseover">选择鼠标事件</option>
+		<option value="click" style="background-color: #F2FFD3;">click</option>	
+		<option value="mouseover" style="background-color: #F2FFD3;">mouseover</option>
+	</select>
+	<select id="sel3">
+		<option  value="2000">选择切换时间</option>
+		<option value="1000" style="background-color: #F2FFD3;">1000</option>	
+		<option value="2000" style="background-color: #F2FFD3;">2000</option>	
+		<option value="3000" style="background-color: #F2FFD3;">3000</option>	
+		<option value="4000" style="background-color: #F2FFD3;">4000</option>	
+	</select>
+	<select id="sel4">
+		<option  value="1">是否自动</option>
+		<option value="0" style="background-color: #F2FFD3;">不自动</option>	
+		<option value="1" style="background-color: #F2FFD3;">自动</option>	
+	</select>
+	<select id="sel5" style="display:none;">
+		<option value="swingTo">选择效果配置</option>
+		<option value="linear" style="background-color: #F2FFD3;">linear</option>
+		<option value="easeIn" style="background-color: #F2FFD3;">easeIn</option>
+		<option value="easeOut" style="background-color: #F2FFD3;">easeOut</option>
+		<option value="easeBoth" style="background-color: #F2FFD3;">easeBoth</option>
+		<option value="easeInStrong" style="background-color: #F2FFD3;">easeInStrong</option>
+		<option value="easeOutStrong" style="background-color: #F2FFD3;">easeOutStrong</option>
+		<option value="easeBothStrong" style="background-color: #F2FFD3;">easeBothStrong</option>
+		<option value="easeOutQuart" style="background-color: #F2FFD3;">easeOutQuart</option>
+		<option value="easeInOutExpo" style="background-color: #F2FFD3;">easeInOutExpo</option>
+		<option value="easeOutExpo" style="background-color: #F2FFD3;">easeOutExpo</option>
+		<option value="swingFrom" style="background-color: #F2FFD3;">swingFrom</option>
+		<option value="swingTo" style="background-color: #F2FFD3;">swingTo</option>
+		<option value="backIn" style="background-color: #F2FFD3;">backIn</option>
+		<option value="backOut" style="background-color: #F2FFD3;">backOut</option>
+		<option value="bounce" style="background-color: #F2FFD3;">bounce</option>
+	</select>
+	<input type="button"  value="生成" id="clicks" />
+</div>
+<div style=" font:14px/20px '微软雅黑'">
+配置后可更换参数，<span>注：替换Qfast(false,'widgets',function(){ <span style="color:red">K.tabs({ })</span> } ) 即可</span>
+</div>
+<br />
+<div id="int" style="color:#666; font:14px/20px '微软雅黑'; white-space: pre-wrap; word-break: break-all; ">
+
+</div>				
+</div>		
+          </div>
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top">
+		<textarea name="code" class="html" id="code">
+    <style type="text/css">
+.fs_E3{ height:195px; position:relative; background:transparent; width:310px; position:relative; }
+.fs_E3 .E3fBt{ position:absolute; top:180px; left:232px; overflow:hidden; zoom:1;  height:16px; z-index:10; }
+.fs_E3 .shadow a{ text-decoration:none; color:#ffffff; font-size:14px; font-weight:bolder; overflow:hidden; margin-left:10px; }
+.fs_E3 .fcon{ position:relative; float:left;  }
+.fs_E3 .E3fBt i{font-style:normal }  
+.fs_E3 .E3fBt a{display:inline;float:left;background:#87897E;width:18px;height:15px;position:relative;  
+margin:0 1px 0 0;color:#ffffff;font:12px/15px "宋体";text-decoration:none; text-align:center; outline:0 }
+.fs_E3 .E3fBt a:hover,.fs_E3 .E3fBt a.current{ background:#FF7E00;color:#fff}
+.fs_E3 .fcon img{ display:block; }
+.fs_E3 .fix{ position:relative; overflow:hidden; height:195px;  }  
+.fs_E3 .fPs{ width:100%; overflow:hidden; position:relative;  }  
+    </style>
+    <!--HTML结构开始-->
+	<div id="fsE3" class="fs_E3">
+		<div class="fPs">
+			<div class="fix">
+				<div id="E3pic1" class="fPic">
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_1.jpg"></a> 
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_2.jpg"></a> 
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_3.jpg"></a> 
+					</div>
+					<div class="fcon">
+						<a target="_blank" href="#">
+							<img alt="" src="http://mat1.gtimg.com/news/base2011/foucs/img/B_4.jpg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="E3fBt" id="E3fBt">
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>1</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>2</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>3</i></a>
+			<a href="javascript:void(0)" hidefocus="true" target="_self"><i>4</i></a>
+		</div>
+	</div>
+    <!--HTML结构结束-->
+    <!--JS调取参数配置开始 -->
+		
+<script type="text/javascript">        
+        Qfast.add('fx', { path: "http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js", type: "js" });
+        Qfast.add('widgets', { path: "http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js", type: "js", requires: ['fx'] });
+        Qfast(false, 'widgets', function () {
+            K.tabs({
+                id: 'fsE3',   //焦点图包裹id
+                conId: "E3pic1",  //** 大图域包裹id
+				tabId:"E3fBt",
+				tabTn:"a",
+	            conCn: '.fcon', //** 大图域配置class			
+                auto: 1,   //自动播放
+                effect: 'slide',   //效果配置
+				vertical:'top',
+				eType: 'mouseover', //** 鼠标事件
+				pageBt:true,//是否有按钮切换页码
+                interval: 2000  //** 停顿时间
+            })
+        })
+    </script>
+    <!--JS调取参数配置结束 -->
+		
+		
+		
+		</textarea>
+</td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<style>
+			.dp-highlighter .bar{ display:block; padding-left:15px;  }
+			.cMode{ min-width:550px; }
+			.fs_E3{ margin:0 auto; }
+</style>
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

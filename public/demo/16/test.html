@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+	<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="http://mat1.gtimg.com/www/js/Koala/Koala.min.1.4.1.js" type="text/javascript"></script>
+	<title></title>
+</head>
+<body>
+   <!--无限有按钮滚动-->  
+ <style type="text/css"> 
+	.ScA2{ position:relative } 
+	.ScA2 .scwr{ position:relative; top:20px; left:68px; overflow: hidden; zoom: 1; width: 754px; height:180px; } /*可视宽度width,height需设置正确 */	
+    .ScA2 .split{ float:left; } 
+	.ScA2 .prev, .ScA2 .next{ position:absolute; cursor:pointer; display:block; width:30px; height:60px; top:px; }
+    .ScA2 .prev{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn1.jpg) }  
+    .ScA2 .next{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn3.png); right:10px; }   
+    .ScA2 .prevMouseClass{ }   /*鼠标划过状态*/
+    .ScA2 .nextMouseClass{ }  /*鼠标划过状态*/
+
+    </style>  
+    <!--HTML结构开始-->  
+	 <!--做这种开发者工具集一定做好应用环境调查，否则呃..-->  
+    <div id="ScA2" class="ScA2">  
+        <div class="scwr">  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+        </div>  
+        <a class="prev"></a>  
+        <a class="next"></a>                      
+    </div>  
+    <!--HTML结构开始-->  
+    <!--JS调取参数配置开始 -->  
+      
+<script type="text/javascript">  
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});   
+Qfast.add('widgets1',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});    
+Qfast(false,'widgets1',function(){  
+        K.scroll({   
+            id:"ScA2",                          //滚动区域包裹id  
+            effect:"scroll",            //效果配置  
+			scWr:".scwr",
+            scrElem:".split",               //滚动单元元素配置    
+            scrNum:1,                       //触发一次滚动事件走过的滚动元素个数   
+            auto:1,                             //自动滚动是否开启  
+            vertical:"left",                //滚动方向  
+            loop:true,                      //是否循环滚  
+            interval:1000,              //自动滚动时间间隔  
+            bns: ['.prev', '.next'],//滚动配置按钮class             
+            prevMouseClass:"prevMouseClass",//鼠标悬停按钮显示按钮类名  
+            nextMouseClass:"nextMouseClass"//鼠标悬停按钮显示按钮类名  
+        })  
+})  
+</script>  
+    <!--JS调取参数配置结束 -->  
+	
+
+    <style type="text/css">
+	.ScA1 .scwr{ position:relative; top:20px; left:68px; overflow: hidden; zoom: 1; width: 754px; height:180px; } /*可视宽度width,height必须设置 */	
+    .ScA1 .split{ float:left; } 
+    </style>
+	<div id="ScA1" class="ScA1">
+		<div class="scwr">
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+		</div>
+	</div>	
+    <script type="text/javascript">
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"}); 
+Qfast.add('widgets2',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});  
+Qfast(true,'widgets2',function(){
+	K.scroll({ 
+		id:"ScA1",  		        		//滚动区域包裹id
+		effect:"scroll",       				//效果配置
+		scWr:".scwr",
+		scrElem:".split",  				//滚动单元元素配置	
+		scrNum:1, 						//触发一次滚动事件走过的滚动元素个数 
+		auto:1, 							//自动滚动是否开启
+		vertical:"left",				//滚动方向
+		loop:true,						//是否循环滚动
+		interval:1000 //自动滚动时间间隔
+	})
+})
+
+    </script>			
+		
+<style type="text/css">  
+.ScA3{ position:relative }
+.ScA3 .scwr{ position:relative; top:20px; left:68px; overflow: hidden; zoom: 1; width: 754px; height:180px; } /*可视宽度width,height必须设置 */	
+.ScA3 .split{ float:left; } 
+.ScA3 .prev, .ScA3 .next{ width:30px; height:60px; display:block; position:absolute; top:64px; cursor:pointer }
+.ScA3 .prev{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn1.jpg) no-repeat; left:15px;}  
+.ScA3 .next{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn3.png) no-repeat; left:847px; }   
+.ScA3 .prevMouseClass{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn2.jpg) no-repeat; }  /*鼠标划过状态*/
+.ScA3 .nextMouseClass{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn4.jpg) no-repeat; }    /*鼠标划过状态*/
+.ScA3 .prevStopClass{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn1_n.jpg) no-repeat; }  /*鼠标停滞状态*/
+.ScA3 .nextStopClass{ background:url(http://mat1.gtimg.com/joke/Koala/pic/btn3_n.png) no-repeat; }   /*鼠标停滞状态*/
+
+.ScA3{ position:relative }
+.ScA3 .scwr{ position:relative; top:px; left:px; overflow: hidden; zoom: 1; width: px; height:px; } /*可视宽度width,height必须设置 */	
+.ScA3 .split{ float:left; } 
+.ScA3 .prev, .ScA3 .next{ width:px; height:px; display:block; position:absolute; top:px; cursor:pointer }
+.ScA3 .prev{ background:url() no-repeat;}  
+.ScA3 .next{ background:url() no-repeat;}   
+.ScA3 .prevMouseClass{ background:url() no-repeat; }  /*鼠标划过状态*/
+.ScA3 .nextMouseClass{ background:url() no-repeat; }    /*鼠标划过状态*/
+.ScA3 .prevStopClass{ background:url() no-repeat; }  /*鼠标停滞状态*/
+.ScA3 .nextStopClass{ background:url() no-repeat; }   /*鼠标停滞状态*/
+</style>  
+    <!--HTML结构开始-->  
+    <div id="ScA3" class="ScA3">  
+        <div class="scwr">  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a><!--内容代码--></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+			<div class="split"><a href="#">  
+				<img src="http://mat1.gtimg.com/joke/Koala/pic/pic1.png"></a></div>  
+        </div>  
+        <a class="prev"></a>  
+        <a class="next"></a>                      
+    </div>  
+    <!--HTML结构开始-->  
+    <!--JS调取参数配置开始 -->  
+      
+<script type="text/javascript">  
+
+Qfast.add('fx',{path:"http://mat1.gtimg.com/joke/Koala/plusfx1.0.min.js",type:"js"});   
+Qfast.add('widgets3',{path:"http://mat1.gtimg.com/joke/Koala/plus/Terminator2.2.min.js",type:"js",requires: ['fx']});    
+Qfast(false,'widgets3',function(){  
+	K.scroll({   
+		id:"ScA3",                          //滚动区域包裹id  
+		effect:"scroll",            //效果配置  
+		scrElem:".split",               //滚动单元元素配置    
+		scrNum:1,                       //触发一次滚动事件走过的滚动元素个数   
+		showNum:5,                  //滚动区域显示滚动元素的个数           
+		auto:1,                             //自动滚动是否开启  
+		vertical:"left",                //滚动方向  
+		loop:false,                     //是否循环滚  
+		interval:1000,              //自动滚动时间间隔  
+		bns: ['.prev', '.next'],//滚动配置按钮class             
+		prevMouseClass:"prevMouseClass",//鼠标悬停按钮显示按钮类名  
+		prevStopClass:"prevStopClass",   //鼠标停止按钮显示按钮类名  
+		nextMouseClass:"nextMouseClass", //鼠标悬停按钮显示按钮类名  
+		nextStopClass:"nextStopClass" //鼠标停止按钮显示按钮类名  
+	})  
+})  
+
+</script>  
+    <!--JS调取参数配置结束 -->  
+          		
+</body>
+</html>

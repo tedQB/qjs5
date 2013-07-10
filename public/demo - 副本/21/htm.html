@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>视频切换</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>视频切换</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><span>视频切换</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+		<style type="text/css">
+#video{width:400px; height:300px;}
+#videoList{ padding:0.5em; font:14px/1.5 "微软雅黑"}
+#videoList span{ padding:0 1em; cursor:pointer}
+#videoList span.current{background:#999; color:#fff}
+</style>
+<div id="video"><!--视频容器-->
+	<img src="http://img1.gtimg.com/sports/pics/hv1/213/13/881/57290553.jpg" alt="" /><!--默认的视频封面-->
+</div>
+ 
+
+<div id="videoList"><!--视频节目列表-->
+	<span name="85VyxQRddIg">节目一</span>
+	<span name="8c5zq21bGHM">节目二</span>
+	<span name="81Tg8TTV3Uw">节目三</span>
+	<span name="82CPBNHOFpY">节目四</span>                         
+</div> 
+                   
+<script src="http://mat1.qq.com/www/js/swfobjectopt.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var playerLianBo = new Object();
+	playerLianBo = {
+		$:function(v){return document.getElementById(v)},
+		getELE:function(id,ele){return this.$(id).getElementsByTagName(ele);},
+		defPlayer:new Object(),
+		initId:"flashC",
+		listId:"list",
+		defListTag:"a",
+		isAuto:"0",
+		thisPlayer:function(curr){return this.getELE(this.listId,this.defListTag)[curr].attributes['name'].nodeValue;},
+		init:function(n){
+		this.defPlayer = new SWFObject("http://static.video.qq.com/TencentPlayer.swf?v="+this.thisPlayer(n),"payerC","100%","100%", "9.0.28", "#FFFFFF")
+		this.defPlayer.addParam("allowScriptAccess", "always"); 
+		this.defPlayer.addParam("allowFullScreen", "true"); 
+		this.defPlayer.addParam("scale", "noscale");
+		this.defPlayer.addParam("wmode", "transparent");
+		this.defPlayer.addVariable("auto",this.isAuto);
+		this.defPlayer.addVariable("pic","http://img1.gtimg.com/sports/pics/hv1/213/13/881/57290553.jpg");
+		this.defPlayer.addVariable("list","2");
+		this.defPlayer.write(this.initId); 
+		this.stats(n);
+		this.isAuto = '1';
+		},
+		click:function(){
+			var ele = this.getELE(this.listId,this.defListTag);
+			for(var i=0;i<ele.length;i++){
+				(function(){
+					var p =i;
+					ele[p].onclick = function(){
+						playerLianBo.init(p);
+					}
+				})(i);
+			}
+		},stats:function(n){
+			var listStyle = this.$("videoList").getElementsByTagName("span")/*列表容器和列表标签*/
+			for(var i=0;i<listStyle.length;i++){
+				if(n==i){
+					listStyle[i].className = "current";/*当前节目按钮的样式*/
+				}else{
+					listStyle[i].className = "";
+				}
+			}	
+		}
+	}
+	playerLianBo.initId = "video";//视频容器
+	playerLianBo.listId = "videoList";//列表容器
+	playerLianBo.defListTag = "span";//列表标签
+	playerLianBo.init(0);
+	playerLianBo.click();
+</script>
+
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<div id="video"><!--视频容器-->
+	<img src="http://img1.gtimg.com/sports/pics/hv1/213/13/881/57290553.jpg" alt="" /><!--默认的视频封面-->
+</div>
+ 
+<div id="videoList"><!--视频节目列表-->
+	<span name="85VyxQRddIg">节目一</span>
+	<span name="8c5zq21bGHM">节目二</span>
+	<span name="81Tg8TTV3Uw">节目三</span>
+	<span name="82CPBNHOFpY">节目四</span>                         
+</div> 
+                   
+<script src="http://mat1.qq.com/www/js/swfobjectopt.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var playerLianBo = new Object();
+	playerLianBo = {
+		$:function(v){return document.getElementById(v)},
+		getELE:function(id,ele){return this.$(id).getElementsByTagName(ele);},
+		defPlayer:new Object(),
+		initId:"flashC",
+		listId:"list",
+		defListTag:"a",
+		isAuto:"0",
+		thisPlayer:function(curr){return this.getELE(this.listId,this.defListTag)[curr].attributes['name'].nodeValue;},
+		init:function(n){
+		this.defPlayer = new SWFObject("http://static.video.qq.com/TencentPlayer.swf?v="+this.thisPlayer(n),"payerC","100%","100%", "9.0.28", "#FFFFFF")
+		this.defPlayer.addParam("allowScriptAccess", "always"); 
+		this.defPlayer.addParam("allowFullScreen", "true"); 
+		this.defPlayer.addParam("scale", "noscale");
+		this.defPlayer.addParam("wmode", "transparent");
+		this.defPlayer.addVariable("auto",this.isAuto);
+		this.defPlayer.addVariable("pic","http://img1.gtimg.com/sports/pics/hv1/213/13/881/57290553.jpg");
+		this.defPlayer.addVariable("list","2");
+		this.defPlayer.write(this.initId); 
+		this.stats(n);
+		this.isAuto = '1';
+		},
+		click:function(){
+			var ele = this.getELE(this.listId,this.defListTag);
+			for(var i=0;i<ele.length;i++){
+				(function(){
+					var p =i;
+					ele[p].onclick = function(){
+						playerLianBo.init(p);
+					}
+				})(i);
+			}
+		},stats:function(n){
+			var listStyle = this.$("videoList").getElementsByTagName("span")/*列表容器和列表标签*/
+			for(var i=0;i<listStyle.length;i++){
+				if(n==i){
+					listStyle[i].className = "current";/*当前节目按钮的样式*/
+				}else{
+					listStyle[i].className = "";
+				}
+			}	
+		}
+	}
+	playerLianBo.initId = "video";//视频容器
+	playerLianBo.listId = "videoList";//列表容器
+	playerLianBo.defListTag = "span";//列表标签
+	playerLianBo.init(0);
+	playerLianBo.click();
+</script>
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p><span class="author">boqiu</span>  2011.10.21 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

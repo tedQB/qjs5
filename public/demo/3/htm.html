@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>焦点图</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+<script src="http://mat1.gtimg.com/joke/js/comm/Qfast.js" type="text/javascript"></script> 
+<script type="text/javascript">
+Qfast.add('common',{path:"http://mat1.gtimg.com/news/base2011/ued_common.js",type:"js"});
+Qfast.add('focus',{path:"http://mat1.gtimg.com/news/base2011/foucs/ued_foucs.js",type:"js",requires: ['common']});
+Qfast(false,'focus',function(){
+	var focus1 = new uedFoucs();
+		focus1.Content = [
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_1.jpg',img2:'',title:'擎天柱博博派的领袖 500万年前',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_2.jpg',img2:'',title:'变形金刚人类工业史上的一朵奇葩',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_3.jpg',img2:'',title:'这车感觉像布加迪威龙',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_4.jpg',img2:'',title:'双排气筒用肯定火力猛么',slink:'#'}];
+		focus1.imgShowId = 'focus_img';
+		focus1.titShowId = 'focus_tit';
+		focus1.dotShowId = 'focus_dot';
+		focus1.arrLeftId = 'focus1_preBtn';
+		focus1.arrRightId = 'focus1_nextBtn';
+		focus1.curOnclass = {imgC:'current',titC:'current',dotC:'current'};
+		focus1.onEvents = 'click';
+		focus1.onEffect = 1;
+		focus1.isAuto = true;
+		focus1.autoInt = 4;
+		focus1.init();
+})
+</script>
+<style type="text/css">
+.fs_C{position:relative;background:#000}
+.ued_focus_main{position:absolute;overflow:hidden;background:#000}
+.ued_focus_main a{display:none;background:#000}
+.ued_focus_main .current{display:block}
+.ued_focus_text{position:absolute}
+.ued_focus_text a{display:none;outline:0}
+.ued_focus_text .current{display:block}
+.ued_focus_sub{position:absolute}
+.ued_focus_sub a{display:none;cursor:pointer;overflow:hidden;outline:0}
+.ued_focus_sub a:hover{text-decoration:none}
+.ued_focus_sub .current{display:block}
+.f_preBtn{position:absolute;cursor:pointer}
+.f_nextBtn{position:absolute;cursor:pointer}.fs_C{width:308px;height:270px;border:1px solid #ccc}
+.fs_C img{display:inline-block;border:0;width:308px;height:238px}
+.fs_C i{font-style:normal}
+.fs_C .ued_focus_main{left:0;top:0;width:100%}
+.fs_C .ued_focus_text{left:0;bottom:0;height:32px;font:14px/32px "宋体";text-align:center;color:#fff;width:100%;background:#39383A}
+.fs_C .ued_focus_text a{color:#fff;text-decoration:none}
+.fs_C .ued_focus_text .current{color:#fff}
+.fs_C .ued_focus_sub{right:0;bottom:37px;height:17px;text-align:center}
+.fs_C .ued_focus_sub a{display:inline;float:left;background:#000;width:17px;height:17px;position:relative;margin:0 4px 0 0;color:#fff;font:12px/17px "宋体";text-decoration:none}
+.fs_C .ued_focus_sub .current,.fs_C .ued_focus_sub a:hover{background:#DDDCE1;color:#000}
+.fs_C .ued_focus_sub img{display:none}
+.fs_C .f_preBtn,.fs_C .f_nextBtn{display:none}
+</style>
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>焦点图</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><a href="javascript:void(0)">焦点图</a><i>&gt;</i><span>效果C</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top"><div class="cMode">
+            <!--HTML结构开始，请勿修改-->  
+<div id="focus1" class="fs_C">
+<div id="focus_img" class="ued_focus_main"></div>
+<div id="focus_tit" class="ued_focus_text"></div>
+<div class="ued_focus_sub">
+<div id="focus_dot"></div>
+</div>
+<div class="f_preBtn"></div>
+<div class="f_nextBtn"></div>
+</div>
+          </div></td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<!--请粘贴在相应区域内，使用后请删除注释-->  
+<div class="focus_wrap">  
+<style type="text/css">
+.fs_C{position:relative;background:#000}
+.ued_focus_main{position:absolute;overflow:hidden;background:#000}
+.ued_focus_main a{display:none;background:#000}
+.ued_focus_main .current{display:block}
+.ued_focus_text{position:absolute}
+.ued_focus_text a{display:none;outline:0}
+.ued_focus_text .current{display:block}
+.ued_focus_sub{position:absolute}
+.ued_focus_sub a{display:none;cursor:pointer;overflow:hidden;outline:0}
+.ued_focus_sub a:hover{text-decoration:none}
+.ued_focus_sub .current{display:block}
+.f_preBtn{position:absolute;cursor:pointer}
+.f_nextBtn{position:absolute;cursor:pointer}.fs_C{width:308px;height:270px;border:1px solid #ccc}
+.fs_C img{display:inline-block;border:0;width:308px;height:238px}
+.fs_C i{font-style:normal}
+.fs_C .ued_focus_main{left:0;top:0;width:100%}
+.fs_C .ued_focus_text{left:0;bottom:0;height:32px;font:14px/32px "宋体";text-align:center;color:#fff;width:100%;background:#39383A}
+.fs_C .ued_focus_text a{color:#fff;text-decoration:none}
+.fs_C .ued_focus_text .current{color:#fff}
+.fs_C .ued_focus_sub{right:0;bottom:37px;height:17px;text-align:center}
+.fs_C .ued_focus_sub a{display:inline;float:left;background:#000;width:17px;height:17px;position:relative;
+margin:0 4px 0 0;color:#fff;font:12px/17px "宋体";text-decoration:none}
+.fs_C .ued_focus_sub .current,.fs_C .ued_focus_sub a:hover{background:#DDDCE1;color:#000}
+.fs_C .ued_focus_sub img{display:none}
+.fs_C .f_preBtn,.fs_C .f_nextBtn{display:none}
+</style>
+<script src="http://mat1.gtimg.com/joke/js/comm/Qfast.js" type="text/javascript"></script>
+<script type="text/javascript">
+Qfast.add('common',{path:"http://mat1.gtimg.com/news/base2011/ued_common.js",type:"js"});
+Qfast.add('focus',{path:"http://mat1.gtimg.com/news/base2011/foucs/ued_foucs.js",type:"js",requires: ['common']});
+Qfast(false,'focus',function(){
+	var focus1 = new uedFoucs();
+		focus1.Content = [
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_1.jpg',img2:'',title:'擎天柱博博派的领袖 500万年前',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_2.jpg',img2:'',title:'变形金刚人类工业史上的一朵奇葩',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_3.jpg',img2:'',title:'这车感觉像布加迪威龙',slink:'#'},
+		{img1:'http://mat1.gtimg.com/news/base2011/foucs/img/C_4.jpg',img2:'',title:'双排气筒用肯定火力猛么',slink:'#'}];
+		focus1.imgShowId = 'focus_img';
+		focus1.titShowId = 'focus_tit';
+		focus1.dotShowId = 'focus_dot';
+		focus1.arrLeftId = 'focus1_preBtn';
+		focus1.arrRightId = 'focus1_nextBtn';
+		focus1.curOnclass = {imgC:'current',titC:'current',dotC:'current'};
+		focus1.onEvents = 'click';
+		focus1.onEffect = 1;
+		focus1.isAuto = true;
+		focus1.autoInt = 4;
+		focus1.init();
+})
+</script>
+<!--HTML结构开始-->
+<div id="focus1" class="fs_C">
+<div id="focus_img" class="ued_focus_main"></div>
+<div id="focus_tit" class="ued_focus_text"></div>
+<div class="ued_focus_sub">
+<div id="focus_dot"></div>
+</div>
+<div class="f_preBtn"></div>
+<div class="f_nextBtn"></div>
+</div>
+<!--HTML结构结束-->
+<!--代码结束，请删除所有注释-->
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>

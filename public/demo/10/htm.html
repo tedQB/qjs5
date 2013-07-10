@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="gb2312">
+<title>页卡</title>
+<link href="http://mat1.gtimg.com/www/base/base.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/content.css" />
+</head>
+<body>
+<div class="content">
+  <div class="qTitle">
+    <div class="qTitleInner">
+      <h2>页卡</h2>
+    </div>
+  </div>
+  <div class="crumbs"><a href="javascript:void(0)">js库</a><i>&gt;</i><span>页卡</span> </div>
+  <div class="article">
+    <div class="tItem">
+      <div class="tItemInner">
+        <h3>效果</h3>
+      </div>
+    </div>
+    <div class="cItem">
+    <div class="cItemInner">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td valign="top">
+            <!--HTML结构开始，请勿修改-->  
+		<script src="http://mat1.gtimg.com/joke/js/comm/Qfast.js" type="text/javascript"></script>
+						<script type="text/javascript">
+						Qfast.add('common',{path:"http://mat1.gtimg.com/news/base2011/ued_common.js",type:"js"});
+						Qfast.add('tabcard',{path:"http://news.qq.com/base2011/ued_tabcard.js",type:"js",requires: ['common']});
+						</script>
+						<p>只提供结构，样式请自己编写</p>
+						<style type="text/css">
+						#cardBtn1{ width:200px; height:22px; font:12px/20px "宋体"; overflow:hidden; position:relative; z-index:2}
+						#cardBtn1 li{ float:left; display:inline; margin:0 2px 0 0; border:1px solid #ccc; padding:0 6px; cursor:pointer; height:20px; overflow:hidden}
+						#cardBtn1 .current{border-bottom:1px solid #fff}
+						#cardBody1{width:178px; height:60px; border:1px solid #ccc; margin-top:-1px; position:relative; z-index:1; padding:10px; font:12px/20px "宋体"}
+						</style>
+						<ul id="cardBtn1">
+							<li class="tabBtn">页卡一</li>
+							<li class="tabBtn">页卡二</li>
+							<li class="tabBtn">页卡三</li>
+						</ul>
+						<div id="cardBody1">
+							<div class="tabBody">内容一</div>
+							<div class="tabBody">内容二</div>
+							<div class="tabBody">内容三</div>
+						</div>
+						
+						<script language="javascript">
+						Qfast(false,'tabcard',function(){
+						var tabCard1 = new uedTabCard();
+							 tabCard1.tabBtnId = "cardBtn1";//页卡按钮容器id
+							 tabCard1.tabBtnTag = "li";//页卡按钮元素名称
+							 tabCard1.tabBtnClass = "tabBtn";//页卡按钮class名称
+							 tabCard1.curBtnStyle = {curClass:"current"};//页卡按钮的当前激活状态
+							 tabCard1.tabBodyId = "cardBody1";//页卡实体容器id
+							 tabCard1.tabBodyTag = "div";//页卡实体元素名称
+							 tabCard1.tabBodyClass = "tabBody";//页卡实体class名称
+							 tabCard1.onEvent = "mouseover";//页卡的驱动时间click、mouseover等
+							 tabCard1.curIndex = 0;//默认激活状态的页卡，从0开始
+							 tabCard1.init();
+						})
+						</script>
+
+		</td>
+        <td valign="top" align="center" width="60"><img src="../../image/ico.gif" /></td>
+        <td valign="top"><textarea name="code" class="html" id="code">
+<!--请粘贴在相应区域内，使用后请删除注释-->
+<script src="http://mat1.gtimg.com/joke/js/comm/Qfast.js" type="text/javascript"></script>
+<script type="text/javascript">
+Qfast.add('common',{path:"http://mat1.gtimg.com/news/base2011/ued_common.js",type:"js"});
+Qfast.add('tabcard',{path:"http://news.qq.com/base2011/ued_tabcard.js",type:"js",requires: ['common']});
+</script>
+<ul id="cardBtn1">
+	<li class="tabBtn">页卡一</li>
+	<li class="tabBtn">页卡二</li>
+	<li class="tabBtn">页卡三</li>
+</ul>
+<div id="cardBody1">
+	<div class="tabBody">内容一</div>
+	<div class="tabBody">内容二</div>
+	<div class="tabBody">内容三</div>
+</div>
+
+<script language="javascript">
+Qfast(false,'tabcard',function(){
+var tabCard1 = new uedTabCard();
+	 tabCard1.tabBtnId = "cardBtn1";//页卡按钮容器id
+	 tabCard1.tabBtnTag = "li";//页卡按钮元素名称
+	 tabCard1.tabBtnClass = "tabBtn";//页卡按钮class名称
+	 tabCard1.curBtnStyle = {curClass:"current"};//页卡按钮的当前激活状态
+	 tabCard1.tabBodyId = "cardBody1";//页卡实体容器id
+	 tabCard1.tabBodyTag = "div";//页卡实体元素名称
+	 tabCard1.tabBodyClass = "tabBody";//页卡实体class名称
+	 tabCard1.onEvent = "mouseover";//页卡的驱动时间click、mouseover等
+	 tabCard1.curIndex = 0;//默认激活状态的页卡，从0开始
+	 tabCard1.init();
+})
+</script>
+
+</textarea></td>
+      </tr>
+    </table>
+    
+  </div>
+</div>
+
+<div class="tItem">
+  <div class="tItemInner">
+    <h3>代码维护</h3>
+  </div>
+</div>
+<div class="cItem">
+  <div class="cItemInner">
+    <p>JS Code By.<span class="author">boqiu</span> 2011.3.2 update</p>
+    <p>HTML CSS By. <span class="author">boqiu</span>  2011.10.10 update</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="splitter"><a href="#"></a></div>
+<script type="text/javascript" src="../../js/ycnlib.js"></script> 
+<script type="text/javascript">
+	ycnlib.require("../../js/xyntaxhighlighter.css","../../js/shcore.js","../../js/shbrushjscript.js","../../js/shbrushxml.js","../../js/shbrushcss.js");
+	addOnLoad(function(){
+	dp.sh.Toolbar.Commands.ViewSource.label = "新窗口查看源码";
+	dp.sh.Toolbar.Commands.CopyToClipboard.label = "复制代码";
+	dp.SyntaxHighlighter.ClipboardSwf = "../../js/clipboard.swf";
+	dp.SyntaxHighlighter.HighlightAll("code");
+	});
+</script>
+</body>
+</html>
